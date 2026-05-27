@@ -44,21 +44,26 @@ public class GameManager : MonoBehaviour
     public void LoadMaterial(int MaterialID)
     {
         if(actualAnimal == null) return;
-        if(scaleValues.TryGetValue(MaterialID, out var value))
+        if (inventoryStructure.InventoryAmount(MaterialID) > 0)
         {
-            value++;
-            scaleValues[MaterialID] = value;
+            if(scaleValues.TryGetValue(MaterialID, out var value))
+            {
+                value++;
+                scaleValues[MaterialID] = value;
+            }
+            else
+            {
+                scaleValues[MaterialID] = 1;
+            }
+            InventoryManager.Instance.RemoveFromInventory(MaterialID,1);
+            UpdateInternalValue();
         }
-        else
-        {
-            scaleValues[MaterialID] = 1;
-        }
-        InventoryManager.Instance.RemoveFromInventory(MaterialID,1);
-        UpdateInternalValue();
     }
+    
     public void UnloadMaterial(int MaterialID)
     {
         if(actualAnimal == null) return;
+        
         if (scaleValues.TryGetValue(MaterialID, out var value))
         {
             value--;
@@ -87,7 +92,6 @@ public class GameManager : MonoBehaviour
     {
         int tempValue;
         internalValue = 0;
-        // debug all prosibilities
         foreach(var values in scaleValues)
         {
             

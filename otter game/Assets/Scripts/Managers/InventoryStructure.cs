@@ -31,7 +31,6 @@ public class InventoryStructure : ScriptableObject
     
     public int InventoryAmount(int index)
     {
-        //return inventory[index].MaterialAmount;
         foreach (BaseMaterial material in inventory)
         {
             if (material.ID == index)

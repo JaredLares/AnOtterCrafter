@@ -4,25 +4,26 @@ using System.Collections.Generic;
 
 public class SelectUI : MonoBehaviour
 {
-    [SerializeField] private LayerMask layerMask;
-    [SerializeField] private string tagToSelect;
+    [SerializeField] private LayerMask UILayer;
+    [SerializeField] private LayerMask BubbleLayer;
+    [SerializeField] private string UITag;
+    [SerializeField] private string bubbleTag;
 
     void Update()
     { 
         // click Derecho
         if (Input.GetMouseButtonDown(0))
         {
+            // revisar raycast en ui
             PointerEventData pointerData = new PointerEventData(EventSystem.current);
             pointerData.position = Input.mousePosition;
-
             List<RaycastResult> results = new List<RaycastResult>();
             EventSystem.current.RaycastAll(pointerData, results);
-
             if (results.Count > 0)
             {
                 for(int i = 0;i < results.Count;i++)
                 {
-                    if (results[i].gameObject.CompareTag(tagToSelect))
+                    if (results[i].gameObject.CompareTag(UITag))
                     {
                         if (results[i].gameObject.GetComponent<hotbarItem>())
                         {   
@@ -31,21 +32,24 @@ public class SelectUI : MonoBehaviour
                     }
                 }
             }
+            // revisar raycast in game
+            
+            
+            
         }
         // click izquierdo
         if (Input.GetMouseButtonDown(1))
         {
+            // raycast en ui
             PointerEventData pointerData = new PointerEventData(EventSystem.current);
             pointerData.position = Input.mousePosition;
-
             List<RaycastResult> results = new List<RaycastResult>();
             EventSystem.current.RaycastAll(pointerData, results);
-
             if (results.Count > 0)
             {
                 for(int i = 0;i < results.Count;i++)
                 {
-                    if (results[i].gameObject.CompareTag(tagToSelect))
+                    if (results[i].gameObject.CompareTag(UITag))
                     {
                         if (results[i].gameObject.GetComponent<hotbarItem>())
                         {
@@ -55,7 +59,10 @@ public class SelectUI : MonoBehaviour
                     }
                 }
             }
+            // raycast in game
+            
+            
+            
         }
     }
-
 }

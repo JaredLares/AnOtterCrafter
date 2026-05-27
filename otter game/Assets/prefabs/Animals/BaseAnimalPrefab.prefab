@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3791911674171571418}
   - component: {fileID: 614526170294883599}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SpeechDialogueBG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -150,9 +150,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1398921641499956850}
   - component: {fileID: 649651667919636146}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SpeechDialogue
-  m_TagString: Untagged
+  m_TagString: Dialogue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -186,8 +186,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpeechDialogue
   sizex: 0
-  sizey: 0
+  maxScale: 0
+  minScale: 0
   materials: []
+  speechList: []
 --- !u!1 &8767428150664172525
 GameObject:
   m_ObjectHideFlags: 0
