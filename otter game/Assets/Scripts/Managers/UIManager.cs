@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -7,12 +8,18 @@ public class UIManager : MonoBehaviour
 {
     //  hotbar
     public List<GameObject> images = new List<GameObject>();
+    [SerializeField] private bool isActive = false; 
+    [SerializeField] private GameObject hotbar;
+    [SerializeField] private InventoryStructure structure;
     // texto en la hotbar
     public List<TextMeshProUGUI> itemsAmount;
-    [SerializeField] private InventoryStructure structure;
+    // trade button
+    
+    [SerializeField] private GameObject tradeButton;
+    [SerializeField] private GameObject tradeOptions;
+    
+    // instance
     public static UIManager Instance;
-    [SerializeField] private GameObject hotbar;
-    [SerializeField] private bool isActive = false; 
 
     private void Awake()
     {
@@ -52,5 +59,41 @@ public class UIManager : MonoBehaviour
             hotbar.SetActive(true);
             isActive = true;
         }
+    }
+
+    public void PrepareTrade()
+    {
+        tradeButton.SetActive(true);
+    }
+    public void TradingScreen()
+    {
+        tradeButton.SetActive(false);
+        StartCoroutine(TradeScreen());
+    }
+    public void MakeTrade()
+    {
+        
+        StartCoroutine(CostumerScreen());
+    }
+
+    public void DontTrade()
+    {
+        
+        StartCoroutine(CostumerScreen());
+    }
+
+    IEnumerator TradeScreen()
+    {
+        yield return new WaitForSeconds(1.1f);
+        tradeOptions.SetActive(true);
+        yield return null;
+    }
+
+    IEnumerator CostumerScreen()
+    {
+        tradeOptions.SetActive(false);
+        GameManager.Instance.ConsumerScreen();
+        yield return new WaitForSeconds(1.1f);
+        GameManager.Instance.SpawnAnimal();
     }
 }

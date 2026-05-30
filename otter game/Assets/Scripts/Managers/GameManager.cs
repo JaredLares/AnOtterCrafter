@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private AnimalsBiomeList actualBiome;
     [SerializeField] private GameObject actualAnimal;
     [SerializeField] private GameObject spawnPoint;
+    [SerializeField] private bool isTrading = false;
+    [SerializeField] private GameObject tradeCamera;
 
     private void Awake()
     {
@@ -41,6 +43,16 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void TradeScreen()
+    {
+        tradeCamera.SetActive(true);
+        UIManager.Instance.TradingScreen();
+    }
+
+    public void ConsumerScreen()
+    {
+      tradeCamera.SetActive(false);   
+    }
     public void LoadMaterial(int MaterialID)
     {
         if(actualAnimal == null) return;
@@ -146,6 +158,7 @@ public class GameManager : MonoBehaviour
             }
         }
         AnimalScaleValue();
+        UIManager.Instance.PrepareTrade();
     }
     public void AnimalScaleValue()
     {
@@ -163,5 +176,10 @@ public class GameManager : MonoBehaviour
         {
             animal.VisualizeDialogue();
         }
+    }
+
+    public void TradingSwitch()
+    {
+        
     }
 }
