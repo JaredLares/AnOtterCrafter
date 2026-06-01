@@ -72,13 +72,13 @@ public class UIManager : MonoBehaviour
     }
     public void MakeTrade()
     {
-        
+        GameManager.Instance.MakeTrade();
         StartCoroutine(CostumerScreen());
     }
 
     public void DontTrade()
     {
-        
+        GameManager.Instance.ReturnMaterials();
         StartCoroutine(CostumerScreen());
     }
 
@@ -93,6 +93,7 @@ public class UIManager : MonoBehaviour
     {
         tradeOptions.SetActive(false);
         GameManager.Instance.ConsumerScreen();
+        GameManager.Instance.ResetPlayerDictionary();
         yield return new WaitForSeconds(1.1f);
         GameManager.Instance.SpawnAnimal();
     }

@@ -35,14 +35,9 @@ public class GameManager : MonoBehaviour
         SpawnAnimal();
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            SpawnAnimal();
-        }
-    }
-
+    #region Player Options And Funtions
+    
+    // player options an funtions
     public void TradeScreen()
     {
         tradeCamera.SetActive(true);
@@ -53,11 +48,11 @@ public class GameManager : MonoBehaviour
     public void ConsumerScreen()
     {
         tradeCamera.SetActive(false);   
-        isTrading = true;
+        isTrading = false;
     }
     public void LoadMaterial(int MaterialID)
     {
-        if(actualAnimal == null) return;
+        if(actualAnimal == null || isTrading == false) return;
         if (inventoryStructure.InventoryAmount(MaterialID) > 0)
         {
             if(scaleValues.TryGetValue(MaterialID, out var value))
@@ -76,7 +71,7 @@ public class GameManager : MonoBehaviour
     
     public void UnloadMaterial(int MaterialID)
     {
-        if(actualAnimal == null) return;
+        if(actualAnimal == null || isTrading == false) return;
         
         if (scaleValues.TryGetValue(MaterialID, out var value))
         {
@@ -93,25 +88,16 @@ public class GameManager : MonoBehaviour
         }
         UpdateInternalValue();
     }
+    
     public void ResetPlayerDictionary()
     {
         scaleValues = new Dictionary<int, int>();
     }
-
-    public void ResetAnimalDictionary()
-    {
-        animalScaleValues = new Dictionary<int, int>();
-    }
+    
     public void UpdateInternalValue()
     {
         int tempValue;
         internalValue = 0;
-        foreach(var values in scaleValues)
-        {
-            
-            Debug.Log(values);
-        }
-
         for(int i = 1;i<=inventoryStructure.AllmaterialsCount() ;i++)
         {
             if(scaleValues.TryGetValue(i, out int amount))
@@ -120,6 +106,50 @@ public class GameManager : MonoBehaviour
                 internalValue += tempValue;
             }
         }
+    }
+
+    public void MakeTrade()
+    {
+        if (internalValue > animalInternalValue)
+        {
+            Debug.Log("trade complete");
+            AddNewMaterial();
+        }
+        else
+        {
+            Debug.Log("canceltrade");
+            ReturnMaterials();
+        }
+    }
+    public void ReturnMaterials()
+    {
+        if (scaleValues.Count > 0)
+        {
+            foreach (var material in scaleValues)
+            {
+                InventoryManager.Instance.AddToInventory(material.Key,material.Value);
+            }
+        }
+    }
+
+    public void AddNewMaterial()
+    {
+        if (animalScaleValues.Count > 0)
+        {
+            foreach (var material in animalScaleValues)
+            {
+                InventoryManager.Instance.AddToInventory(material.Key,material.Value);
+            }
+            
+        }
+    }
+    #endregion
+
+    #region Animals options And Funtions
+    
+    public void ResetAnimalDictionary()
+    {
+        animalScaleValues = new Dictionary<int, int>();
     }
     public void SpawnAnimal()
     {
@@ -179,9 +209,6 @@ public class GameManager : MonoBehaviour
             animal.VisualizeDialogue();
         }
     }
-
-    public void TradingSwitch()
-    {
-        
-    }
+    
+    #endregion
 }
