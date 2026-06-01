@@ -101,7 +101,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 649651667919636146, guid: 4d5f88c1a59b7eb468f4995cd58ddd0c, type: 3}
       propertyPath: sizex
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 649651667919636146, guid: 4d5f88c1a59b7eb468f4995cd58ddd0c, type: 3}
       propertyPath: sizey
@@ -117,11 +117,11 @@ PrefabInstance:
       objectReference: {fileID: 7186758218113244215}
     - target: {fileID: 1398921641499956850, guid: 4d5f88c1a59b7eb468f4995cd58ddd0c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.19
+      value: -4.43
       objectReference: {fileID: 0}
     - target: {fileID: 1398921641499956850, guid: 4d5f88c1a59b7eb468f4995cd58ddd0c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.33
+      value: 5.43
       objectReference: {fileID: 0}
     - target: {fileID: 2370812347139337630, guid: 4d5f88c1a59b7eb468f4995cd58ddd0c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -167,6 +167,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 3791911674171571418, guid: 4d5f88c1a59b7eb468f4995cd58ddd0c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 5125521495570179488, guid: 4d5f88c1a59b7eb468f4995cd58ddd0c, type: 3}
       propertyPath: m_Name
       value: Beaver
@@ -185,7 +189,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5659204961399614398, guid: 4d5f88c1a59b7eb468f4995cd58ddd0c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5659204961399614398, guid: 4d5f88c1a59b7eb468f4995cd58ddd0c, type: 3}
       propertyPath: m_TagString

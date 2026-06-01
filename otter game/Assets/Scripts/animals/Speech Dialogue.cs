@@ -51,7 +51,7 @@ public class SpeechDialogue : MonoBehaviour
                 posX = -sizex + index * spacing;
             }
             temp.transform.position = transform.position + new Vector3(posX, 0, 0);
-            temp.transform.localScale = new Vector3(0.3f, 0.3f, 1);
+            temp.transform.localScale = new Vector3(0.5f, 0.5f, 1);
             SpriteRenderer sr = temp.AddComponent<SpriteRenderer>();
             sr.sprite = material.MaterialSprite;
             sr.sortingOrder = 5;
