@@ -47,11 +47,13 @@ public class GameManager : MonoBehaviour
     {
         tradeCamera.SetActive(true);
         UIManager.Instance.TradingScreen();
+        isTrading = true;
     }
 
     public void ConsumerScreen()
     {
-      tradeCamera.SetActive(false);   
+        tradeCamera.SetActive(false);   
+        isTrading = true;
     }
     public void LoadMaterial(int MaterialID)
     {
