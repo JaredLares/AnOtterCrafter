@@ -5,7 +5,6 @@ using Random = UnityEngine.Random;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance;
     private Dictionary<int, int> scaleValues = new Dictionary<int, int>();
     private Dictionary<int, int> animalScaleValues = new Dictionary<int, int>();
     [SerializeField] private InventoryStructure inventoryStructure;
@@ -16,6 +15,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject spawnPoint;
     [SerializeField] private bool isTrading = false;
     [SerializeField] private GameObject tradeCamera;
+    
+    public static GameManager Instance;
 
     private void Awake()
     {
@@ -40,6 +41,7 @@ public class GameManager : MonoBehaviour
     public void TradeScreen()
     {
         tradeCamera.SetActive(true);
+        Scale.Instance.LoadAnimalTrade(animalScaleValues);
         UIManager.Instance.TradingScreen();
         isTrading = true;
     }
@@ -92,6 +94,7 @@ public class GameManager : MonoBehaviour
     public void ResetPlayerDictionary()
     {
         scaleValues = new Dictionary<int, int>();
+        
     }
     
     public void UpdateInternalValue()
@@ -168,6 +171,7 @@ public class GameManager : MonoBehaviour
     public void AnimalTrade()
     {
         ResetAnimalDictionary();
+        Scale.Instance.resetDictionaries();
         // get animal manager
         if (actualAnimal.TryGetComponent<AnimalManager>(out AnimalManager animal))
         {
