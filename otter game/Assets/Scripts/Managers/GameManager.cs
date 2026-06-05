@@ -18,6 +18,9 @@ public class GameManager : MonoBehaviour
     
     public static GameManager Instance;
 
+    #region Script Essencials
+    // partes essenciales del script
+    
     private void Awake()
     {
         if (Instance == null)
@@ -30,11 +33,24 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
     private void Start()
     {
         SpawnAnimal();
     }
+
+    public int InternalValue
+    {
+        get { return internalValue; }
+    }
+
+    public int AnimalInternalValue
+    {
+        get { return animalInternalValue; }
+    }
+    
+    #endregion
+    
+    
     #region Player Options And Funtions
     
     // player options an funtions
@@ -68,17 +84,18 @@ public class GameManager : MonoBehaviour
             }
             InventoryManager.Instance.RemoveFromInventory(MaterialID,1);
             UpdateInternalValue();
+            Scale.Instance.AddPlayerTrade(MaterialID);
         }
     }
     
     public void UnloadMaterial(int MaterialID)
     {
         if(actualAnimal == null || isTrading == false) return;
-        
+
         if (scaleValues.TryGetValue(MaterialID, out var value))
         {
             value--;
-            if(value == 0)
+            if (value == 0)
             {
                 scaleValues.Remove(MaterialID);
             }
@@ -86,9 +103,12 @@ public class GameManager : MonoBehaviour
             {
                 scaleValues[MaterialID] = value;
             }
-            InventoryManager.Instance.AddToInventory(MaterialID,1);
+
+            InventoryManager.Instance.AddToInventory(MaterialID, 1);
+            Scale.Instance.RemovePlayerTrade(MaterialID);
         }
         UpdateInternalValue();
+        Scale.Instance.RotateScale(internalValue, animalInternalValue);
     }
     
     public void ResetPlayerDictionary()
@@ -113,19 +133,38 @@ public class GameManager : MonoBehaviour
 
     public void MakeTrade()
     {
-        if (internalValue > animalInternalValue)
+        if (internalValue == animalInternalValue)
+        {
+            bool temp = (Random.Range(0, 2) == 0);
+            if (temp)
+            {
+                Debug.Log("trade complete");
+                AddNewMaterial();
+            }
+            else
+            {
+                Debug.Log("cancel trade");
+                ReturnMaterials();
+            }
+        }
+        else if(internalValue > animalInternalValue)
         {
             Debug.Log("trade complete");
             AddNewMaterial();
         }
         else
         {
-            Debug.Log("canceltrade");
+            Debug.Log("cancel trade");
             ReturnMaterials();
         }
+        internalValue = 0;
+        Scale.Instance.resetDictionaries();
     }
+    
     public void ReturnMaterials()
     {
+        Scale.Instance.resetDictionaries();
+        internalValue = 0;
         if (scaleValues.Count > 0)
         {
             foreach (var material in scaleValues)
@@ -171,7 +210,6 @@ public class GameManager : MonoBehaviour
     public void AnimalTrade()
     {
         ResetAnimalDictionary();
-        Scale.Instance.resetDictionaries();
         // get animal manager
         if (actualAnimal.TryGetComponent<AnimalManager>(out AnimalManager animal))
         {

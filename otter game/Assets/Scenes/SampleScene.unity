@@ -2621,8 +2621,10 @@ MonoBehaviour:
   scaleTop: {fileID: 927185533}
   scaleLeft: {fileID: 1018736854}
   scaleRight: {fileID: 1339982790}
+  animaleScale: []
+  tradingScale: []
+  materialPRefab: {fileID: 2276731657652684221, guid: 9786992ab67e1a349a2df5a9387da6fb, type: 3}
   maxRotation: 30
-  minRotation: 0
 --- !u!1 &1315268187
 GameObject:
   m_ObjectHideFlags: 0
@@ -3236,7 +3238,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 2b7629ca49fcc0145a726bc59ddf14f7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3467,7 +3469,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.66726625}
+  m_Offset: {x: 0, y: -0.6921736}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3477,7 +3479,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.66, y: 0.48546767}
+  m_Size: {x: 1.66, y: 0.43565297}
   m_EdgeRadius: 0
 --- !u!50 &1801863322
 Rigidbody2D:
@@ -3505,7 +3507,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!61 &1801863323
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3540,7 +3542,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.72, y: 0}
+  m_Offset: {x: 0.7595588, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3550,7 +3552,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.16, y: 1.87}
+  m_Size: {x: 0.08088231, y: 1.87}
   m_EdgeRadius: 0
 --- !u!61 &1801863324
 BoxCollider2D:
@@ -3586,7 +3588,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.76, y: 0}
+  m_Offset: {x: -0.78197706, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3596,7 +3598,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.16, y: 1.82}
+  m_Size: {x: 0.11604571, y: 1.82}
   m_EdgeRadius: 0
 --- !u!1 &1868154494
 GameObject:
@@ -4132,7 +4134,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!61 &2057849004
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4243,7 +4245,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2078669781
 RectTransform:
   m_ObjectHideFlags: 0
