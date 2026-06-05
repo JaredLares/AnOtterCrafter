@@ -8,7 +8,9 @@ public class UIManager : MonoBehaviour
 {
     //  hotbar
     public List<GameObject> images = new List<GameObject>();
-    [SerializeField] private bool isActive = false; 
+    [SerializeField] private GameObject bagItem;
+    [SerializeField] private bool isActive = true;
+    [SerializeField] private GameObject button;
     [SerializeField] private GameObject hotbar;
     [SerializeField] private InventoryStructure structure;
     // texto en la hotbar
@@ -52,11 +54,15 @@ public class UIManager : MonoBehaviour
         if(isActive)
         {
             hotbar.SetActive(false);
+            button.SetActive(false);
+            bagItem.SetActive(true);
             isActive = false;
         }
         else
         {
             hotbar.SetActive(true);
+            button.SetActive(true);
+            bagItem.SetActive(false);
             isActive = true;
         }
     }

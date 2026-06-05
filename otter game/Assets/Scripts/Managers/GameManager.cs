@@ -156,8 +156,9 @@ public class GameManager : MonoBehaviour
     
     public void ReturnMaterials()
     {
-        Scale.Instance.resetDictionaries();
         internalValue = 0;
+        Scale.Instance.RotateScale(0, 0);
+        Scale.Instance.resetDictionaries();
         if (scaleValues.Count > 0)
         {
             foreach (var material in scaleValues)
@@ -165,6 +166,7 @@ public class GameManager : MonoBehaviour
                 InventoryManager.Instance.AddToInventory(material.Key,material.Value);
             }
         }
+
     }
 
     public void AddNewMaterial()

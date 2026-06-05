@@ -29,6 +29,7 @@ public class Scale : MonoBehaviour
 
     public void resetDictionaries()
     {
+        Rotate(new Vector3(0,0,0));
         animaleScaleValue.Clear();
         foreach (var item in animaleScale)
         {
@@ -40,7 +41,6 @@ public class Scale : MonoBehaviour
         }
         animaleScale.Clear();
         tradingScale.Clear();
-        Rotate(new Vector3(0,0,0));
     }
     
     public void LoadAnimalTrade(Dictionary<int, int> animalTrade)
@@ -112,6 +112,7 @@ public class Scale : MonoBehaviour
         {
             if(animaleScaleValue.TryGetValue(i, out int amount))
             {
+                RotateScale(GameManager.Instance.InternalValue, GameManager.Instance.AnimalInternalValue);
                 for (int j = 0; j < amount; j++)
                 {
                     GameObject temp = Instantiate(materialPRefab, scaleRight.transform.position,new Quaternion(0,0,0,0));
@@ -124,6 +125,6 @@ public class Scale : MonoBehaviour
                 }
             }
         }
-        RotateScale(GameManager.Instance.InternalValue, GameManager.Instance.AnimalInternalValue);
+
     }
 }
