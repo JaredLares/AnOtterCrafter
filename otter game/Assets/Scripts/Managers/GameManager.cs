@@ -50,10 +50,7 @@ public class GameManager : MonoBehaviour
     
     #endregion
     
-    
     #region Player Options And Funtions
-    
-    // player options an funtions
     public void TradeScreen()
     {
         tradeCamera.SetActive(true);
@@ -138,23 +135,19 @@ public class GameManager : MonoBehaviour
             bool temp = (Random.Range(0, 2) == 0);
             if (temp)
             {
-                Debug.Log("trade complete");
                 AddNewMaterial();
             }
             else
             {
-                Debug.Log("cancel trade");
                 ReturnMaterials();
             }
         }
         else if(internalValue > animalInternalValue)
         {
-            Debug.Log("trade complete");
             AddNewMaterial();
         }
         else
         {
-            Debug.Log("cancel trade");
             ReturnMaterials();
         }
         internalValue = 0;

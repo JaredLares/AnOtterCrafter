@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7926345725669714264}
   - component: {fileID: 2648002642679749668}
+  - component: {fileID: 8876907236926068578}
   m_Layer: 0
   m_Name: beaver
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 8443719189210309310}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.63, z: 0}
+  m_LocalPosition: {x: 0, y: 2.73, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -91,6 +92,28 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!95 &8876907236926068578
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8443719189210309310}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 293bde585da9bf84e930ed2b350a5402, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &3257780832245938057
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -108,6 +131,10 @@ PrefabInstance:
       value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1127627322703936674, guid: 4d5f88c1a59b7eb468f4995cd58ddd0c, type: 3}
+      propertyPath: animalAnim
+      value: 
+      objectReference: {fileID: 8876907236926068578}
+    - target: {fileID: 1127627322703936674, guid: 4d5f88c1a59b7eb468f4995cd58ddd0c, type: 3}
       propertyPath: preferences
       value: 
       objectReference: {fileID: 11400000, guid: 5459695b4f283b34581050396ebbd330, type: 2}
@@ -121,7 +148,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1398921641499956850, guid: 4d5f88c1a59b7eb468f4995cd58ddd0c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.43
+      value: 5.03
       objectReference: {fileID: 0}
     - target: {fileID: 2370812347139337630, guid: 4d5f88c1a59b7eb468f4995cd58ddd0c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -169,7 +196,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3791911674171571418, guid: 4d5f88c1a59b7eb468f4995cd58ddd0c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.25
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5125521495570179488, guid: 4d5f88c1a59b7eb468f4995cd58ddd0c, type: 3}
       propertyPath: m_Name

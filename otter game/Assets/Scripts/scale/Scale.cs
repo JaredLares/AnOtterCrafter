@@ -87,7 +87,6 @@ public class Scale : MonoBehaviour
             float porTemp = maxRotation / Mathf.Max(animalScaleValue, Mathf.Epsilon);
             float tempRotation = -maxRotation + playerScaleValue * porTemp;
             if(tempRotation > maxRotation){tempRotation = maxRotation;}
-            Debug.Log(tempRotation);
             StartCoroutine(Rotate(new Vector3(0,0,tempRotation)));
         }
     }
