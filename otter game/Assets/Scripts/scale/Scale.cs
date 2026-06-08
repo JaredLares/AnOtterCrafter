@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class Scale : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class Scale : MonoBehaviour
     [SerializeField] private List<GameObject> tradingScale = new List<GameObject>();
     [SerializeField] private GameObject materialPRefab;
     [SerializeField] private int maxRotation = 30;
+    [SerializeField] private VisualEffect leftSpawn;
+    [SerializeField] private VisualEffect rightSpawn;
     
     public static Scale Instance;
     
@@ -52,6 +55,7 @@ public class Scale : MonoBehaviour
     
     public void AddPlayerTrade(int materialID)
     {
+        leftSpawn.Play();
         GameObject temp = Instantiate(materialPRefab, scaleLeft.transform.position,new Quaternion(0,0,0,0));
         temp.GetComponent<SpriteRenderer>().sprite =
             InventoryManager.Instance.inventoryStructure.inventorySprite(materialID);
@@ -115,6 +119,7 @@ public class Scale : MonoBehaviour
                 RotateScale(GameManager.Instance.InternalValue, GameManager.Instance.AnimalInternalValue);
                 for (int j = 0; j < amount; j++)
                 {
+                    rightSpawn.Play();
                     GameObject temp = Instantiate(materialPRefab, scaleRight.transform.position,new Quaternion(0,0,0,0));
                     temp.GetComponent<SpriteRenderer>().sprite =
                         InventoryManager.Instance.inventoryStructure.inventorySprite(i);
