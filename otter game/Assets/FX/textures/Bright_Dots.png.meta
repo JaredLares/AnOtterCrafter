@@ -1,0 +1,598 @@
+fileFormatVersion: 2
+guid: 39ed458c6338f2449b815aed5f7a7e63
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -9128482319615668670
+    second: Bright_Dots_0
+  - first:
+      213: -6596748039527499264
+    second: Bright_Dots_1
+  - first:
+      213: -8534049811170187085
+    second: Bright_Dots_2
+  - first:
+      213: -5305223061120053369
+    second: Bright_Dots_3
+  - first:
+      213: 7134174897492196720
+    second: Bright_Dots_4
+  - first:
+      213: 1437379031479367051
+    second: Bright_Dots_5
+  - first:
+      213: 8369366846373404342
+    second: Bright_Dots_6
+  - first:
+      213: -3778565081565307986
+    second: Bright_Dots_7
+  - first:
+      213: -1976439185173756857
+    second: Bright_Dots_8
+  - first:
+      213: -8442585705289044407
+    second: Bright_Dots_9
+  - first:
+      213: -1933116002524384951
+    second: Bright_Dots_10
+  - first:
+      213: 6127924297680022596
+    second: Bright_Dots_11
+  - first:
+      213: 4922377832796498097
+    second: Bright_Dots_12
+  - first:
+      213: 3238714779061056258
+    second: Bright_Dots_13
+  - first:
+      213: 5669129990155081871
+    second: Bright_Dots_14
+  - first:
+      213: -6541464650927119770
+    second: Bright_Dots_15
+  - first:
+      213: 6735399903914698409
+    second: Bright_Dots_16
+  - first:
+      213: 3017414302912912821
+    second: Bright_Dots_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Bright_Dots_0
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 470
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24ecfd0f1bd115180800000000000000
+      internalID: -9128482319615668670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bright_Dots_1
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 406
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00a753feb94a374a0800000000000000
+      internalID: -6596748039527499264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bright_Dots_2
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 413
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b826bd79e6f09980800000000000000
+      internalID: -8534049811170187085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bright_Dots_3
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 412
+        width: 23
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78f8ab3fbbf0066b0800000000000000
+      internalID: -5305223061120053369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bright_Dots_4
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 414
+        width: 23
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07df782554ea10360800000000000000
+      internalID: 7134174897492196720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bright_Dots_5
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 355
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b853ce21d9892f310800000000000000
+      internalID: 1437379031479367051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bright_Dots_6
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 358
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6be9401ddc6f52470800000000000000
+      internalID: 8369366846373404342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bright_Dots_7
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 369
+        width: 23
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eabda98f317df8bc0800000000000000
+      internalID: -3778565081565307986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bright_Dots_8
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 320
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7444e8f58074294e0800000000000000
+      internalID: -1976439185173756857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bright_Dots_9
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 319
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94ea4722809e5da80800000000000000
+      internalID: -8442585705289044407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bright_Dots_10
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 274
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94139efdc313c25e0800000000000000
+      internalID: -1933116002524384951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bright_Dots_11
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 255
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44ce3bd7ea2ca0550800000000000000
+      internalID: 6127924297680022596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bright_Dots_12
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 223
+        width: 23
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b8a71e1f8ccf4440800000000000000
+      internalID: 4922377832796498097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bright_Dots_13
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 209
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 203fdbe9ee932fc20800000000000000
+      internalID: 3238714779061056258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bright_Dots_14
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 228
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8815b090bbccae40800000000000000
+      internalID: 5669129990155081871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bright_Dots_15
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 146
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 662e6b2ee8c0835a0800000000000000
+      internalID: -6541464650927119770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bright_Dots_16
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 168
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a62905e682f87d50800000000000000
+      internalID: 6735399903914698409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bright_Dots_17
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 126
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bd9e41525200e920800000000000000
+      internalID: 3017414302912912821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Bright_Dots_0: -9128482319615668670
+      Bright_Dots_1: -6596748039527499264
+      Bright_Dots_10: -1933116002524384951
+      Bright_Dots_11: 6127924297680022596
+      Bright_Dots_12: 4922377832796498097
+      Bright_Dots_13: 3238714779061056258
+      Bright_Dots_14: 5669129990155081871
+      Bright_Dots_15: -6541464650927119770
+      Bright_Dots_16: 6735399903914698409
+      Bright_Dots_17: 3017414302912912821
+      Bright_Dots_2: -8534049811170187085
+      Bright_Dots_3: -5305223061120053369
+      Bright_Dots_4: 7134174897492196720
+      Bright_Dots_5: 1437379031479367051
+      Bright_Dots_6: 8369366846373404342
+      Bright_Dots_7: -3778565081565307986
+      Bright_Dots_8: -1976439185173756857
+      Bright_Dots_9: -8442585705289044407
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
