@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: GlowMath
+  m_Name: GlowMat
   m_Shader: {fileID: -6465566751694194690, guid: 13530694115b24a48abfd0a748597660, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -37,10 +37,6 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _Base_Material:
-        m_Texture: {fileID: 2800000, guid: 4734b087e5f717c4089ecabddd2668fc, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _Bright_BG:
         m_Texture: {fileID: 2800000, guid: bf0f143276f5e8f4aa13b6fb1b8f04d5, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -54,10 +50,6 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 4734b087e5f717c4089ecabddd2668fc, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MainText:
         m_Texture: {fileID: 2800000, guid: 4734b087e5f717c4089ecabddd2668fc, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -75,9 +67,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _GlowMaterial: 0
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - _GLowColor: {r: 2.9960785, g: 1.705343, b: 0, a: 1}
+    - _GLowColor: {r: 1.924528, g: 1.513124, b: 0.4266643, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
