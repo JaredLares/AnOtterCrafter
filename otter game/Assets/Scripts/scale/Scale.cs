@@ -61,6 +61,12 @@ public class Scale : MonoBehaviour
             InventoryManager.Instance.inventoryStructure.inventorySprite(materialID);
         temp.GetComponent<SpriteRenderer>().sortingOrder = 4;
         temp.AddComponent<PolygonCollider2D>();
+        Renderer rend = temp.GetComponent<Renderer>();
+         if (rend != null)
+        {
+            rend.material = new Material(rend.material);
+            rend.material.SetFloat("_GlowMaterial", 0f);
+        }
         tradingScale.Add(temp);
         RotateScale(GameManager.Instance.InternalValue, GameManager.Instance.AnimalInternalValue);
     }
