@@ -11,7 +11,7 @@ public class Scale : MonoBehaviour, IScale
     #endregion
 
     #region InterfaceFunctions
-    public void spawnAnimalMaterial(int ID)
+    public void SpawnAnimalMaterial(int ID)
     {
 
     }
@@ -25,5 +25,6 @@ public class Scale : MonoBehaviour, IScale
     {
         
     }
+    
     #endregion
 }
