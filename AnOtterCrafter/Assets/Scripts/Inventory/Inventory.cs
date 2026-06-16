@@ -2,22 +2,6 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour , Iinventory
 {
-    #region Singleton
-    public static Inventory Instance { get; private set; }
-        private void Awake()
-    {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(gameObject);
-        }
-        else
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-    }
-    #endregion
-
     #region Variables
 
     // public
@@ -40,6 +24,11 @@ public class Inventory : MonoBehaviour , Iinventory
     {
 
         return 0;
+    }
+
+    public Sprite GetItemSprite(int ID)
+    {
+        return null;
     }
     #endregion
 }

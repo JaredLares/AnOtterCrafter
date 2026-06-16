@@ -22,10 +22,10 @@ public class GameManager : MonoBehaviour, IGManager
 #region Variables
 
     // public
-
+    
 
     // private
-
+    [SerializeField] private Inventory inventory;
 
 #endregion
 
@@ -65,14 +65,14 @@ public class GameManager : MonoBehaviour, IGManager
 
     }
 
-    public void AddMaterial()
+    public void AddMaterial(int ID, int amount)
     {
-
+        inventory.AddItem(ID, amount);
     }
 
-    public void SubtractMaterial()
+    public void SubtractMaterial(int ID, int amount)
     {
-
+        inventory.RemoveItem(ID, amount);
     }
 
     public void UpdateBiome()

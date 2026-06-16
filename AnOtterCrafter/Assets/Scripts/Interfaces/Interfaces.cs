@@ -1,3 +1,5 @@
+using UnityEngine;
+
 public interface IGManager
 {
     void MaterialForID(int ID);
@@ -12,9 +14,9 @@ public interface IGManager
 
     void CancelTrade();
 
-    void AddMaterial();
+    void AddMaterial(int ID, int amount);
 
-    void SubtractMaterial();
+    void SubtractMaterial(int ID, int amount);
 
     void UpdateBiome();
 
@@ -28,5 +30,11 @@ public interface Iinventory
 
     int GetItemAmount(int ID);
 
-    //Sprite GetItemSprite(int ID);
+    Sprite GetItemSprite(int ID);
+
+}
+
+public interface IAnimal
+{
+    AnimalPreferences GetPreferences();
 }
