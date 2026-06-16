@@ -38,3 +38,12 @@ public interface IAnimal
 {
     AnimalPreferences GetPreferences();
 }
+
+public interface Iscale
+{
+    void spawnAnimalMaterial(int ID);
+
+    void SpawnPlayerMaterial(int ID);
+
+    void DespawnAnimalMaterial(int ID);
+}
