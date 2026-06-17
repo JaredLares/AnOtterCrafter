@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3aa388b5281ebaa4e80b9c5794fcce82, type: 3}
+  m_Name: InventoryMaterials
+  m_EditorClassIdentifier: Assembly-CSharp::InventorySaver
+  allMaterials:
+  - {fileID: 11400000, guid: b7977ceb04bf9974d84d8c6744d32744, type: 2}
+  - {fileID: 11400000, guid: 3e9b26c33f5a6bf49a1aae2dc81fd731, type: 2}
+  - {fileID: 11400000, guid: 181da595965776a448827a2c18371e0c, type: 2}
+  - {fileID: 11400000, guid: f86e723096fdd1d48b5bfc4d094ef604, type: 2}
+  - {fileID: 11400000, guid: 7a8c57373dd9fa34bb8d209b5717da78, type: 2}
+  - {fileID: 11400000, guid: 78849d0e3f8173145abed7077b42c874, type: 2}

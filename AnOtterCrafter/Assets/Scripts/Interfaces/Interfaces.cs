@@ -31,6 +31,8 @@ public interface Iinventory
     int GetItemAmount(int ID);
 
     Sprite GetItemSprite(int ID);
+    
+    BaseMaterialSO GetMaterialForID(int ID);
 
 }
 
