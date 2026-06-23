@@ -1,10 +1,9 @@
 using UnityEngine;
-
 public class GameManager : MonoBehaviour, IGManager
 {
+
 #region Singleton
     public static GameManager Instance { get; private set; }
-
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -26,9 +25,22 @@ public class GameManager : MonoBehaviour, IGManager
 
     // private
     [SerializeField] private Inventory inventory;
-
+    [SerializeField] private BaseState initialState;
+    [SerializeField] private BaseState currentState;
 #endregion
 
+#region UnityFunctions
+
+    private void Start()
+    {
+        StartStateMachine();
+    }
+
+    private void Update()
+    {
+        UpdateStateMachine();
+    }
+#endregion
 #region InterfaceFuntions
 
     public void MaterialForID(int ID)
@@ -89,5 +101,24 @@ public class GameManager : MonoBehaviour, IGManager
 #endregion
 
 
+#region StateMachine
 
+    private void StartStateMachine()
+    {
+        currentState = initialState;
+        currentState.EnterState(this);
+    }
+
+    private void UpdateStateMachine()
+    {
+        currentState.UpdateState(this);
+    }
+
+    public void ChangeState(BaseState newState)
+    {
+        currentState.ExitState(this);
+        currentState = newState;
+        currentState.EnterState(this);
+    }
+#endregion
 }
