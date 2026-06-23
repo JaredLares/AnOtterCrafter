@@ -206,7 +206,7 @@ public class Inventory : MonoBehaviour , Iinventory
     {
         foreach (var slots in allSlots)
         {
-            if (slots.HasSlot())
+            if (slots.hovering)
             {
                 return slots;
             }
