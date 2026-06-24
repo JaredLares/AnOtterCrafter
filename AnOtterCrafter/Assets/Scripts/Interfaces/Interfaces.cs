@@ -5,9 +5,6 @@ public interface IGManager
     void MaterialForID(int ID);
     void SpriteForID(int ID);
 
-    void ShowHotbar();
-    void HideHotbar();
-
     void ToggleTradeScreen();
 
     void Maketrade();

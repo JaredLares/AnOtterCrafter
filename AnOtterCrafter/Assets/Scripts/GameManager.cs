@@ -68,18 +68,9 @@ public class GameManager : MonoBehaviour, IGManager
 
     }
 
-    public void ShowHotbar()
-    {
-
-    }
-    public void HideHotbar()
-    {
-
-    }
-
     public void ToggleTradeScreen()
     {
-
+        
     }
 
     public void Maketrade()
@@ -89,7 +80,7 @@ public class GameManager : MonoBehaviour, IGManager
 
     public void CancelTrade()
     {
-
+        
     }
 
     public void AddMaterial(int ID, int amount)
