@@ -46,7 +46,7 @@ public class Inventory : MonoBehaviour , Iinventory
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            AddItem(Random.Range(1,7),Random.Range(1,5));
+
         }
         StartDrag();
         UpdateDragIconPosition();

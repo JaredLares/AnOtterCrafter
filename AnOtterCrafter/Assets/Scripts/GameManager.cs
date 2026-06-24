@@ -42,6 +42,11 @@ public class GameManager : MonoBehaviour, IGManager
     private void Start()
     {
         StartStateMachine();
+        int randomGenerator = Random.Range(0, 10);
+        for (int i = 0; i < randomGenerator; i++)
+        {
+            AddMaterial(Random.Range(1,7),Random.Range(1,5));
+        }
     }
 
     private void Update()

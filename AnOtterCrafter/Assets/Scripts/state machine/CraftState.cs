@@ -14,6 +14,6 @@ public class CraftState : BaseState
 
     public override void UpdateState(GameManager stateMachine)
     {
-        
+        stateMachine.CancelTrade();
     }
 }
