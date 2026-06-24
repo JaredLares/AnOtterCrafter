@@ -26,9 +26,9 @@ public class Inventory : MonoBehaviour , Iinventory
 
     private void Awake()
     {
-        inventorySlots.AddRange(inventorySlotParent.GetComponentsInChildren<Slot>());
         hotbarSlots.AddRange(hotbarObject.GetComponentsInChildren<Slot>());
         allSlots.AddRange(hotbarSlots);
+        inventorySlots.AddRange(inventorySlotParent.GetComponentsInChildren<Slot>());
         allSlots.AddRange(inventorySlots);
         
     }

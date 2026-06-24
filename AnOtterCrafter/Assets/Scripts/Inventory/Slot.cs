@@ -58,7 +58,6 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
         holdMaterial = material;
         materialAmount = amount;
-        
         UpdateSlot();
     }
 
@@ -66,7 +65,6 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
         if (holdMaterial != null)
         {
-            Debug.Log(holdMaterial.name);
             materialImage.enabled = true;
             materialImage.sprite = holdMaterial.materialSprite;
             materialAmountText.text = materialAmount.ToString();
