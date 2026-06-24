@@ -10,15 +10,19 @@ public class Inventory : MonoBehaviour , Iinventory
     public GameObject hotbarObject;
     public GameObject inventorySlotParent;
     public Image dragIcon;
+    public BaseState mainState;
+    public BaseState craftState;
+    public BaseState inventoryState;
+    public BaseState tradeState;
     
     // private
     [SerializeField] private InventorySaver inventorySaver;
     private List<Slot> inventorySlots = new List<Slot>();
     private List<Slot> hotbarSlots = new List<Slot>();
     private List<Slot> allSlots = new List<Slot>();
-    
     private Slot draggedSlot = null;
     private bool isDragging = false;
+
     
     #endregion
 

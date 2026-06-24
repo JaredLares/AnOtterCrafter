@@ -17,7 +17,10 @@ public class UI : MonoBehaviour
     #region ui funtions
         public void UpButton()
         {
-            GameManager.Instance.InventoryScene();
+            if (!GameManager.Instance.MainCameraActive())
+            {
+                GameManager.Instance.InventoryScene();
+            }
         }
         public void DownButton()
         {
@@ -25,7 +28,10 @@ public class UI : MonoBehaviour
         }
         public void LeftButton()
         {
-            GameManager.Instance.InventoryScene();
+            if (!GameManager.Instance.CraftingCameraActive())
+            {
+                GameManager.Instance.InventoryScene();
+            }
         }
         public void RightButton()
         {

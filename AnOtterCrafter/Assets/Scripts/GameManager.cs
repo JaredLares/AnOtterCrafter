@@ -109,6 +109,7 @@ public class GameManager : MonoBehaviour, IGManager
 
     public void TradingScene()
     {
+        ChangeState(inventory.tradeState);
         globalInventory.SetActive(false);
         mainCamera.SetActive(false);
         tradeCamera.SetActive(true);
@@ -117,7 +118,8 @@ public class GameManager : MonoBehaviour, IGManager
     }
     
     public void MainScene()
-    {
+    {        
+        ChangeState(inventory.mainState);
         globalInventory.SetActive(false);
         inventoryCamera.SetActive(false);
         craftingCamera.SetActive(false);
@@ -127,6 +129,7 @@ public class GameManager : MonoBehaviour, IGManager
     
     public void InventoryScene()
     {
+        ChangeState(inventory.inventoryState);
         inventoryCamera.SetActive(true);
         craftingCamera.SetActive(false);
         mainCamera.SetActive(false);
@@ -136,11 +139,21 @@ public class GameManager : MonoBehaviour, IGManager
     
     public void CraftingScene()
     {
+        ChangeState(inventory.craftState);
         globalInventory.SetActive(false);
         inventoryCamera.SetActive(false);
         craftingCamera.SetActive(true);
         mainCamera.SetActive(false);
         tradeCamera.SetActive(false);
+    }
+
+    public bool MainCameraActive()
+    {
+        return mainCamera.activeInHierarchy;
+    }   
+    public bool CraftingCameraActive()
+    {
+        return craftingCamera.activeInHierarchy;
     }
 
 #endregion
@@ -172,7 +185,10 @@ public class GameManager : MonoBehaviour, IGManager
     IEnumerator InventoryCouroutine()
     {
         yield return new WaitForSeconds(1);
-        globalInventory.SetActive(true);
+        if (!mainCamera.activeInHierarchy && !craftingCamera.activeInHierarchy)
+        {
+            globalInventory.SetActive(true);
+        }
         yield return null;
     }
 
