@@ -1,3 +1,6 @@
+using System.Collections;
+using Unity.Cinemachine;
+using Unity.VisualScripting;
 using UnityEngine;
 public class GameManager : MonoBehaviour, IGManager
 {
@@ -27,6 +30,12 @@ public class GameManager : MonoBehaviour, IGManager
 
     // private
     [SerializeField] private Inventory inventory;
+    [SerializeField] private GameObject mainCamera;
+    [SerializeField] private GameObject tradeCamera;
+    [SerializeField] private GameObject inventoryCamera;
+    [SerializeField] private GameObject craftingCamera;
+    [SerializeField] private GameObject globalInventory;
+    
 #endregion
 
 #region UnityFunctions
@@ -40,12 +49,14 @@ public class GameManager : MonoBehaviour, IGManager
     {
         UpdateStateMachine();
     }
+    
 #endregion
+
 #region InterfaceFuntions
 
     public void MaterialForID(int ID)
     {
-
+        
     }
 
     public void SpriteForID(int ID)
@@ -94,9 +105,43 @@ public class GameManager : MonoBehaviour, IGManager
 
 #endregion
 
-#region GeneralFunctions
+#region Camera Controllers
 
-
+    public void TradingScene()
+    {
+        globalInventory.SetActive(false);
+        mainCamera.SetActive(false);
+        tradeCamera.SetActive(true);
+        inventoryCamera.SetActive(false);
+        craftingCamera.SetActive(false);
+    }
+    
+    public void MainScene()
+    {
+        globalInventory.SetActive(false);
+        inventoryCamera.SetActive(false);
+        craftingCamera.SetActive(false);
+        mainCamera.SetActive(true);
+        tradeCamera.SetActive(false);
+    }
+    
+    public void InventoryScene()
+    {
+        inventoryCamera.SetActive(true);
+        craftingCamera.SetActive(false);
+        mainCamera.SetActive(false);
+        tradeCamera.SetActive(false);
+        StartCoroutine(InventoryCouroutine());
+    }
+    
+    public void CraftingScene()
+    {
+        globalInventory.SetActive(false);
+        inventoryCamera.SetActive(false);
+        craftingCamera.SetActive(true);
+        mainCamera.SetActive(false);
+        tradeCamera.SetActive(false);
+    }
 
 #endregion
 
@@ -120,5 +165,17 @@ public class GameManager : MonoBehaviour, IGManager
         currentState = newState;
         currentState.EnterState(this);
     }
+#endregion
+
+#region courutines
+
+    IEnumerator InventoryCouroutine()
+    {
+        yield return new WaitForSeconds(1);
+        globalInventory.SetActive(true);
+        yield return null;
+    }
+
+
 #endregion
 }

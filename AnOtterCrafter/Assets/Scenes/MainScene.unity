@@ -201,7 +201,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 50986274}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 229481853}
+        m_TargetAssemblyTypeName: UI, Assembly-CSharp
+        m_MethodName: LeftButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &50986274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -388,7 +400,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9195943862698294393, guid: 0e1496bb22ef4634e9b1b821a1ada804, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9195943862698294393, guid: 0e1496bb22ef4634e9b1b821a1ada804, type: 3}
       propertyPath: m_AnchorMin.x
@@ -396,15 +408,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9195943862698294393, guid: 0e1496bb22ef4634e9b1b821a1ada804, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9195943862698294393, guid: 0e1496bb22ef4634e9b1b821a1ada804, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 200
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9195943862698294393, guid: 0e1496bb22ef4634e9b1b821a1ada804, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 200
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9195943862698294393, guid: 0e1496bb22ef4634e9b1b821a1ada804, type: 3}
       propertyPath: m_LocalPosition.x
@@ -436,11 +448,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9195943862698294393, guid: 0e1496bb22ef4634e9b1b821a1ada804, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 340
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9195943862698294393, guid: 0e1496bb22ef4634e9b1b821a1ada804, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9195943862698294393, guid: 0e1496bb22ef4634e9b1b821a1ada804, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -530,6 +542,11 @@ MonoBehaviour:
   initialState: {fileID: 11400000, guid: 91c04c1185c2e3843a8b07edfcff6759, type: 2}
   currentState: {fileID: 0}
   inventory: {fileID: 229481850}
+  mainCamera: {fileID: 1896848261}
+  tradeCamera: {fileID: 1190881659}
+  inventoryCamera: {fileID: 391988144}
+  craftingCamera: {fileID: 1977997712}
+  globalInventory: {fileID: 653258882}
 --- !u!114 &229481852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2357,7 +2374,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 768303030}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 229481853}
+        m_TargetAssemblyTypeName: UI, Assembly-CSharp
+        m_MethodName: UpButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &768303030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2446,7 +2475,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9195943862698294393, guid: 0e1496bb22ef4634e9b1b821a1ada804, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9195943862698294393, guid: 0e1496bb22ef4634e9b1b821a1ada804, type: 3}
       propertyPath: m_AnchorMin.x
@@ -2454,15 +2483,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9195943862698294393, guid: 0e1496bb22ef4634e9b1b821a1ada804, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9195943862698294393, guid: 0e1496bb22ef4634e9b1b821a1ada804, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 200
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9195943862698294393, guid: 0e1496bb22ef4634e9b1b821a1ada804, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 200
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9195943862698294393, guid: 0e1496bb22ef4634e9b1b821a1ada804, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2494,11 +2523,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9195943862698294393, guid: 0e1496bb22ef4634e9b1b821a1ada804, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9195943862698294393, guid: 0e1496bb22ef4634e9b1b821a1ada804, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9195943862698294393, guid: 0e1496bb22ef4634e9b1b821a1ada804, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2540,7 +2569,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &879016313
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2767,7 +2796,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9195943862698294393, guid: 0e1496bb22ef4634e9b1b821a1ada804, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9195943862698294393, guid: 0e1496bb22ef4634e9b1b821a1ada804, type: 3}
       propertyPath: m_AnchorMin.x
@@ -2775,15 +2804,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9195943862698294393, guid: 0e1496bb22ef4634e9b1b821a1ada804, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9195943862698294393, guid: 0e1496bb22ef4634e9b1b821a1ada804, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 200
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9195943862698294393, guid: 0e1496bb22ef4634e9b1b821a1ada804, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 200
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9195943862698294393, guid: 0e1496bb22ef4634e9b1b821a1ada804, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2815,11 +2844,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9195943862698294393, guid: 0e1496bb22ef4634e9b1b821a1ada804, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 340
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9195943862698294393, guid: 0e1496bb22ef4634e9b1b821a1ada804, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -360
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9195943862698294393, guid: 0e1496bb22ef4634e9b1b821a1ada804, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2925,7 +2954,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1037448554}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 229481853}
+        m_TargetAssemblyTypeName: UI, Assembly-CSharp
+        m_MethodName: RightButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1037448554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3048,7 +3089,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9195943862698294393, guid: 0e1496bb22ef4634e9b1b821a1ada804, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9195943862698294393, guid: 0e1496bb22ef4634e9b1b821a1ada804, type: 3}
       propertyPath: m_AnchorMin.x
@@ -3056,15 +3097,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9195943862698294393, guid: 0e1496bb22ef4634e9b1b821a1ada804, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9195943862698294393, guid: 0e1496bb22ef4634e9b1b821a1ada804, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 200
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9195943862698294393, guid: 0e1496bb22ef4634e9b1b821a1ada804, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 200
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9195943862698294393, guid: 0e1496bb22ef4634e9b1b821a1ada804, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3096,11 +3137,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9195943862698294393, guid: 0e1496bb22ef4634e9b1b821a1ada804, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9195943862698294393, guid: 0e1496bb22ef4634e9b1b821a1ada804, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -360
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9195943862698294393, guid: 0e1496bb22ef4634e9b1b821a1ada804, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3786,7 +3827,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1382875324}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 229481853}
+        m_TargetAssemblyTypeName: UI, Assembly-CSharp
+        m_MethodName: DownButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1382875324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4903,7 +4956,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1851994106
 RectTransform:
   m_ObjectHideFlags: 0

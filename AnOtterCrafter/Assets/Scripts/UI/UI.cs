@@ -7,7 +7,7 @@ public class UI : MonoBehaviour
         // public
     
         // private 
-        private bool isHotbarActive = true;
+        private bool isHotbarActive = false;
         [SerializeField] private GameObject hotbarButton;
         [SerializeField] private GameObject hotbar;
         [SerializeField] private GameObject upButton, downButton, leftButton, rightButton;
@@ -17,19 +17,19 @@ public class UI : MonoBehaviour
     #region ui funtions
         public void UpButton()
         {
-            InventoryScene();
+            GameManager.Instance.InventoryScene();
         }
         public void DownButton()
         {
-            CraftScene();   
+            GameManager.Instance.CraftingScene();
         }
         public void LeftButton()
         {
-            InventoryScene();
+            GameManager.Instance.InventoryScene();
         }
         public void RightButton()
         {
-            MainScene();
+            GameManager.Instance.MainScene();
         }
         public void ToggleHotbar()
         {
@@ -47,21 +47,5 @@ public class UI : MonoBehaviour
             }
         }
 
-        private void CraftScene()
-        {
-        
-        }
-        private void TradeScene()
-        {
-        
-        }
-        private void InventoryScene()
-        {
-        
-        }
-        private void MainScene()
-        {
-        
-        }
     #endregion
 }
