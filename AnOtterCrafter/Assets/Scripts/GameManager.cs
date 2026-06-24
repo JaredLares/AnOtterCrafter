@@ -4,7 +4,6 @@ using Unity.VisualScripting;
 using UnityEngine;
 public class GameManager : MonoBehaviour, IGManager
 {
-
 #region Singleton
     public static GameManager Instance { get; private set; }
     private void Awake()
@@ -27,9 +26,9 @@ public class GameManager : MonoBehaviour, IGManager
     public BaseState initialState;
     public BaseState currentState;
     
-
     // private
     [SerializeField] private Inventory inventory;
+    [SerializeField] private UI gameUI;
     [SerializeField] private GameObject mainCamera;
     [SerializeField] private GameObject tradeCamera;
     [SerializeField] private GameObject inventoryCamera;
@@ -158,7 +157,6 @@ public class GameManager : MonoBehaviour, IGManager
 
 #endregion
 
-
 #region StateMachine
 
     private void StartStateMachine()
@@ -178,6 +176,17 @@ public class GameManager : MonoBehaviour, IGManager
         currentState = newState;
         currentState.EnterState(this);
     }
+
+    public void CloseInventory()
+    {
+        gameUI.CloseHotbar();
+    }
+
+    public void OpenInventory()
+    {
+        gameUI.OpenHotbar();
+    }
+    
 #endregion
 
 #region courutines
@@ -191,7 +200,6 @@ public class GameManager : MonoBehaviour, IGManager
         }
         yield return null;
     }
-
-
+    
 #endregion
 }

@@ -526,11 +526,11 @@ MonoBehaviour:
   hotbarObject: {fileID: 1656504902}
   inventorySlotParent: {fileID: 653258882}
   dragIcon: {fileID: 351850666}
-  inventorySaver: {fileID: 11400000, guid: b327f6abdd6d6f24397e81184edb246a, type: 2}
   mainState: {fileID: 11400000, guid: 91c04c1185c2e3843a8b07edfcff6759, type: 2}
   craftState: {fileID: 11400000, guid: 0c2f04bd3263c17448796059514e3094, type: 2}
   inventoryState: {fileID: 11400000, guid: 64d9316e14b09c3459eae8ee0dd9b164, type: 2}
   tradeState: {fileID: 11400000, guid: d218e7dc2121a5d489b55cf0b404fb1e, type: 2}
+  inventorySaver: {fileID: 11400000, guid: b327f6abdd6d6f24397e81184edb246a, type: 2}
 --- !u!114 &229481851
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -546,6 +546,7 @@ MonoBehaviour:
   initialState: {fileID: 11400000, guid: 91c04c1185c2e3843a8b07edfcff6759, type: 2}
   currentState: {fileID: 0}
   inventory: {fileID: 229481850}
+  gameUI: {fileID: 229481853}
   mainCamera: {fileID: 1896848261}
   tradeCamera: {fileID: 1190881659}
   inventoryCamera: {fileID: 391988144}

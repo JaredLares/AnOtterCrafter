@@ -41,17 +41,25 @@ public class UI : MonoBehaviour
         {
             if(isHotbarActive)
             {
-                isHotbarActive = false;
-                hotbarButton.SetActive(false);
-                hotbar.SetActive(true);
+                CloseHotbar();
             }
             else
             {
-                isHotbarActive = true;
-                hotbarButton.SetActive(true);
-                hotbar.SetActive(false);
+                OpenHotbar();
             }
         }
 
+        public void CloseHotbar()
+        {
+            isHotbarActive = false;
+            hotbarButton.SetActive(true);
+            hotbar.SetActive(false);
+        } 
+        public void OpenHotbar()
+        {
+            isHotbarActive = true;
+            hotbarButton.SetActive(false);
+            hotbar.SetActive(true);
+        }
     #endregion
 }

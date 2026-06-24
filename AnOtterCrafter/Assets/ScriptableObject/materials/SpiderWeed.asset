@@ -15,5 +15,5 @@ MonoBehaviour:
   id: 6
   materialName: spider weed
   materialSprite: {fileID: 21300000, guid: 02f489969078573448bf9225fc88a30d, type: 3}
-  materialMaxAmount: 10
+  materialMaxAmount: 5
   materialValue: 0

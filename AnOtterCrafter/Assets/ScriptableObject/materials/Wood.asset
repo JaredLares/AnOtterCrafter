@@ -15,5 +15,5 @@ MonoBehaviour:
   id: 1
   materialName: Wood
   materialSprite: {fileID: 21300000, guid: 4734b087e5f717c4089ecabddd2668fc, type: 3}
-  materialMaxAmount: 10
+  materialMaxAmount: 3
   materialValue: 1

@@ -5,7 +5,7 @@ public class MainState : BaseState
 {
     public override void EnterState(GameManager stateMachine)
     {
-        
+        stateMachine.CloseInventory();
     }
 
     public override void ExitState(GameManager stateMachine)

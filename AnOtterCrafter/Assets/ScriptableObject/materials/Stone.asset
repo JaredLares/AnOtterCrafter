@@ -15,5 +15,5 @@ MonoBehaviour:
   id: 2
   materialName: Stone
   materialSprite: {fileID: 21300000, guid: b8a77ec9894f66641ab7d078673e3abc, type: 3}
-  materialMaxAmount: 10
+  materialMaxAmount: 3
   materialValue: 1

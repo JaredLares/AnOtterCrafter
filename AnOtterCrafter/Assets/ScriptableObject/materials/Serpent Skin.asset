@@ -15,5 +15,5 @@ MonoBehaviour:
   id: 5
   materialName: serpent skin
   materialSprite: {fileID: 21300000, guid: 3e0a1c9b69598fd4d859a1fe65c2299f, type: 3}
-  materialMaxAmount: 10
+  materialMaxAmount: 1
   materialValue: 1
