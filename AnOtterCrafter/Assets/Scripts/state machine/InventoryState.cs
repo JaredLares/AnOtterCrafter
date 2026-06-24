@@ -1,15 +1,19 @@
 using UnityEngine;
 
-public class InventoryState : MonoBehaviour
+[CreateAssetMenu(fileName = "InventoryState", menuName = "BaseState/InventoryState")]
+public class InventoryState : BaseState
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public override void EnterState(GameManager stateMachine)
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void ExitState(GameManager stateMachine)
+    {
+        
+    }
+
+    public override void UpdateState(GameManager stateMachine)
     {
         
     }

@@ -1,6 +1,7 @@
 using UnityEngine;
 
-public class BaseState : MonoBehaviour
+[CreateAssetMenu(fileName = "BaseState", menuName = "BaseState")]
+public class BaseState : ScriptableObject
 {
     public virtual void EnterState(GameManager stateMachine)
     {

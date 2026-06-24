@@ -13,10 +13,10 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     
     
     // privadas
-    private BaseMaterialSO holdMaterial;
+    [SerializeField]private BaseMaterialSO holdMaterial;
     private int materialAmount;
-    private Image materialImage;
-    private TextMeshProUGUI materialAmountText;
+    public Image materialImage;
+    public TextMeshProUGUI materialAmountText;
     #endregion
 
     #region unity methods
@@ -66,6 +66,7 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
         if (holdMaterial != null)
         {
+            Debug.Log(holdMaterial.name);
             materialImage.enabled = true;
             materialImage.sprite = holdMaterial.materialSprite;
             materialAmountText.text = materialAmount.ToString();

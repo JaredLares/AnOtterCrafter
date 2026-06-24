@@ -21,12 +21,12 @@ public class GameManager : MonoBehaviour, IGManager
 #region Variables
 
     // public
+    public BaseState initialState;
+    public BaseState currentState;
     
 
     // private
     [SerializeField] private Inventory inventory;
-    [SerializeField] private BaseState initialState;
-    [SerializeField] private BaseState currentState;
 #endregion
 
 #region UnityFunctions

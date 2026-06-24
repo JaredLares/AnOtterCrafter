@@ -91,6 +91,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Slot
   hovering: 0
+  materialImage: {fileID: 6120397900759470943}
+  materialAmountText: {fileID: 2237622878127071259}
 --- !u!1 &6998972292018453581
 GameObject:
   m_ObjectHideFlags: 0

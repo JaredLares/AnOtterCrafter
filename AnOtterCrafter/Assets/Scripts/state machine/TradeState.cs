@@ -1,15 +1,19 @@
 using UnityEngine;
 
-public class TradeState : MonoBehaviour
+[CreateAssetMenu(fileName = "TradeState", menuName = "BaseState/TradeState")]
+public class TradeState : BaseState
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public override void EnterState(GameManager stateMachine)
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void ExitState(GameManager stateMachine)
+    {
+        
+    }
+
+    public override void UpdateState(GameManager stateMachine)
     {
         
     }

@@ -1,15 +1,18 @@
 using UnityEngine;
-
-public class CraftState : MonoBehaviour
+[CreateAssetMenu(fileName = "CraftState", menuName = "BaseState/CraftState")]
+public class CraftState : BaseState
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public override void EnterState(GameManager stateMachine)
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void ExitState(GameManager stateMachine)
+    {
+        
+    }
+
+    public override void UpdateState(GameManager stateMachine)
     {
         
     }
