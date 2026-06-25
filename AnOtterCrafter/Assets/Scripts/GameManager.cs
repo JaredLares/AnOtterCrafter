@@ -37,14 +37,15 @@ public class GameManager : MonoBehaviour, IGManager
 
 #region UnityFunctions
 
+    
     private void Start()
     {
-        StartStateMachine();
         int randomGenerator = Random.Range(0, 10);
         for (int i = 0; i < randomGenerator; i++)
         {
             AddMaterial(Random.Range(1,7),Random.Range(1,5));
         }
+        StartStateMachine();
     }
 
     private void Update()
@@ -179,6 +180,11 @@ public class GameManager : MonoBehaviour, IGManager
     public void OpenInventory()
     {
         gameUI.OpenHotbar();
+    }
+
+    public Inventory Inventory()
+    {
+        return inventory;
     }
     
 #endregion

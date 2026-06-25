@@ -29,16 +29,17 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
     #endregion
 
-    #region Interfaces
+    #region handle
 
     public void OnPointerEnter(PointerEventData eventData)
     {
         hovering = true;
+        materialImage.color = new Color(materialImage.color.r, materialImage.color.g, materialImage.color.b, 0.5f);
     }
     public void OnPointerExit(PointerEventData eventData)
     {
         hovering = false;
-
+        materialImage.color = new Color(materialImage.color.r, materialImage.color.g, materialImage.color.b, 1f);
     }
     #endregion
     

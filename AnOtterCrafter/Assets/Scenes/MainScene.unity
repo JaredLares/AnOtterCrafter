@@ -227,7 +227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3018868, g: 0.29191884, b: 0.29191884, a: 0.6039216}
+  m_Color: {r: 0.41509432, g: 0.40922034, b: 0.40922034, a: 0.24705882}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -525,7 +525,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Inventory
   hotbarObject: {fileID: 1656504902}
   inventorySlotParent: {fileID: 653258882}
-  dragIcon: {fileID: 351850666}
   mainState: {fileID: 11400000, guid: 91c04c1185c2e3843a8b07edfcff6759, type: 2}
   craftState: {fileID: 11400000, guid: 0c2f04bd3263c17448796059514e3094, type: 2}
   inventoryState: {fileID: 11400000, guid: 64d9316e14b09c3459eae8ee0dd9b164, type: 2}
@@ -2405,7 +2404,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3018868, g: 0.29191884, b: 0.29191884, a: 0.6039216}
+  m_Color: {r: 0.41509432, g: 0.40922034, b: 0.40922034, a: 0.24705882}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2985,7 +2984,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3018868, g: 0.29191884, b: 0.29191884, a: 0.6039216}
+  m_Color: {r: 0.41509432, g: 0.40922034, b: 0.40922034, a: 0.24705882}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3858,7 +3857,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3018868, g: 0.29191884, b: 0.29191884, a: 0.6039216}
+  m_Color: {r: 0.41509432, g: 0.40922034, b: 0.40922034, a: 0.24705882}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

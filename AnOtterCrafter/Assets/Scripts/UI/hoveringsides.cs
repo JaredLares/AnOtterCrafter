@@ -17,6 +17,6 @@ public class hoveringsides : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        materialImage.color = new Color(materialImage.color.r, materialImage.color.g, materialImage.color.b, 0.5f);
+        materialImage.color = new Color(materialImage.color.r, materialImage.color.g, materialImage.color.b, 0.25f);
     }
 }

@@ -9,7 +9,6 @@ public class Inventory : MonoBehaviour , Iinventory
     // public
     public GameObject hotbarObject;
     public GameObject inventorySlotParent;
-    public Image dragIcon;
     public BaseState mainState;
     public BaseState craftState;
     public BaseState inventoryState;
@@ -20,8 +19,7 @@ public class Inventory : MonoBehaviour , Iinventory
     private List<Slot> inventorySlots = new List<Slot>();
     private List<Slot> hotbarSlots = new List<Slot>();
     private List<Slot> allSlots = new List<Slot>();
-    private Slot draggedSlot = null;
-    private bool isDragging = false;
+
 
     
     #endregion
@@ -35,22 +33,6 @@ public class Inventory : MonoBehaviour , Iinventory
         inventorySlots.AddRange(inventorySlotParent.GetComponentsInChildren<Slot>());
         allSlots.AddRange(inventorySlots);
         
-    }
-
-    private void Start()
-    {
-        
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-
-        }
-        StartDrag();
-        UpdateDragIconPosition();
-        EndDrag();
     }
 
     #endregion
@@ -125,7 +107,7 @@ public class Inventory : MonoBehaviour , Iinventory
     
     #region Inventory Methods
 
-    private int MinIntValue(int value1, int value2)
+    public int MinIntValue(int value1, int value2)
     {
         if (value1 < value2)
         {
@@ -137,94 +119,11 @@ public class Inventory : MonoBehaviour , Iinventory
         }
     }
 
-    private void StartDrag()
+    public List<Slot> GetAllSlots()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            Slot hoveredSlot = GetHoveredSlot();
-            if (hoveredSlot != null && hoveredSlot.HasSlot())
-            {
-                draggedSlot = hoveredSlot;
-                isDragging = true;
-
-                dragIcon.sprite = hoveredSlot.HoldMaterial().materialSprite;
-                dragIcon.color = new Color(1, 1, 1, 0.5f);
-                dragIcon.enabled = true;
-            }
-        }
+        return allSlots;
     }
 
-    private void EndDrag()
-    {
-        if (Input.GetMouseButtonUp(0) && isDragging)
-        {
-             Slot hoveredSlot = GetHoveredSlot();
-             if (hoveredSlot != null )
-             {
-                   HanddleDrop(draggedSlot, hoveredSlot);
-                   
-                   dragIcon.enabled = false;
-                   draggedSlot = null;
-                   isDragging = false;
-             }
-        }
-    }
-
-    private void HanddleDrop(Slot from , Slot to)
-    {
-        if(from == to) return;
-        // stacking same item
-        if (to.HasSlot() && to.HoldMaterial() == from.HoldMaterial())
-        {
-            int max = to.HoldMaterial().materialMaxAmount;
-            int space = max - to.MaterialAmount();
-
-            if (space > 0)
-            {
-                  int move = MinIntValue(space, from.MaterialAmount());
-                  to.SetItem(to.HoldMaterial(), to.MaterialAmount() + move);
-                  from.SetItem(from.HoldMaterial(), from.MaterialAmount() - move);
-                  if(from.MaterialAmount() <= 0) from.ClearSlot();
-                  return;
-            }
-        }
-        // replace diferent item
-        if(to.HasSlot())
-        {
-            BaseMaterialSO tempMaterial = to.HoldMaterial();
-            int temporalAmount = to.MaterialAmount();
-
-            to.SetItem(from.HoldMaterial(), from.MaterialAmount());
-            from.SetItem(tempMaterial, temporalAmount);
-            return;
-        }
-        // move to empty slot
-        if (!to.HasSlot())
-        {
-            to.SetItem(from.HoldMaterial(), from.MaterialAmount());
-            from.ClearSlot();
-        }
-    }
     
-    private Slot GetHoveredSlot()
-    {
-        foreach (var slots in allSlots)
-        {
-            if (slots.hovering)
-            {
-                return slots;
-            }
-        }
-        return null;
-    }
-
-    private void UpdateDragIconPosition()
-    {
-        if (isDragging)
-        {
-            Vector2 mousePos = Input.mousePosition;
-            dragIcon.transform.position = mousePos;
-        }
-    }
     #endregion
 }
