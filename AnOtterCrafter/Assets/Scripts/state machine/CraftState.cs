@@ -16,4 +16,24 @@ public class CraftState : BaseState
     {
         stateMachine.CancelTrade();
     }
+
+    public override void LeftMouseDown()
+    {
+
+    }
+
+    public override void LeftMouseUp()
+    {
+        
+    }
+
+    public override void RightMouseDown()
+    {
+        
+    }
+
+    public override void RightMouseUp()
+    {
+        
+    }
 }
