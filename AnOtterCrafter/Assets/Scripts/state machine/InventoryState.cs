@@ -13,7 +13,6 @@ public class InventoryState : BaseState
     public override void EnterState(GameManager stateMachine)
     {
         dragIcon = stateMachine.dragIcon;
-        stateMachine.CancelTrade(); 
         stateMachine.OpenInventory();
         
     }

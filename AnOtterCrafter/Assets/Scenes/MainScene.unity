@@ -544,7 +544,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   initialState: {fileID: 11400000, guid: 91c04c1185c2e3843a8b07edfcff6759, type: 2}
   currentState: {fileID: 0}
-  dragIcon: {fileID: 0}
+  dragIcon: {fileID: 351850666}
   inventory: {fileID: 229481850}
   gameUI: {fileID: 229481853}
   mainCamera: {fileID: 1896848261}
