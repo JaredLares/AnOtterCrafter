@@ -1,5 +1,7 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
+
 public class GameManager : MonoBehaviour, IGManager
 {
 #region Singleton
@@ -23,6 +25,7 @@ public class GameManager : MonoBehaviour, IGManager
     // public
     public BaseState initialState;
     public BaseState currentState;
+    public Image dragIcon;
     
     // private
     [SerializeField] private Inventory inventory;
