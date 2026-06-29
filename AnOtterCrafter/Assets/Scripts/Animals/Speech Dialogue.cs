@@ -53,7 +53,7 @@ public class SpeechDialogue : MonoBehaviour
             temp.transform.position = transform.position + new Vector3(posX, 0, 0);
             temp.transform.localScale = new Vector3(0.5f, 0.5f, 1);
             SpriteRenderer sr = temp.AddComponent<SpriteRenderer>();
-            sr.sprite = material.materialSprite;
+            sr.sprite = material.MaterialSprite;
             sr.sortingOrder = 5;
             speechList.Add(temp);
             index++;

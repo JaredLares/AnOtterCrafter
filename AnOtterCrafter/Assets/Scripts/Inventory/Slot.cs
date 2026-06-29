@@ -67,7 +67,7 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         if (holdMaterial != null)
         {
             materialImage.enabled = true;
-            materialImage.sprite = holdMaterial.materialSprite;
+            materialImage.sprite = holdMaterial.MaterialSprite;
             materialAmountText.text = materialAmount.ToString();
         }
         else

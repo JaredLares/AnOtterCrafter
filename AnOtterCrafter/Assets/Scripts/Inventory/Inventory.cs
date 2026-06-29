@@ -48,7 +48,7 @@ public class Inventory : MonoBehaviour , Iinventory
             if (slot.HasSlot() && slot.HoldMaterial() == tempMaterial)
             {
                 int currentAmount = slot.MaterialAmount();
-                int maxStack = tempMaterial.materialMaxAmount;
+                int maxStack = tempMaterial.MaterialMaxAmount;
                 if (currentAmount < maxStack)
                 {
                     int spaceLeft = maxStack - currentAmount;
@@ -64,7 +64,7 @@ public class Inventory : MonoBehaviour , Iinventory
         {
             if (!slot.HasSlot())
             {
-                int amountToAdd = MinIntValue(tempMaterial.materialMaxAmount, remainig);
+                int amountToAdd = MinIntValue(tempMaterial.MaterialMaxAmount, remainig);
                 slot.SetItem(tempMaterial, amountToAdd);
                 remainig -= amountToAdd;
                 if(remainig <= 0) return;
@@ -96,7 +96,7 @@ public class Inventory : MonoBehaviour , Iinventory
     {
         foreach (var material in inventorySaver.allMaterials )
         {
-            if (material.id == ID)
+            if (material.ID == ID)
             {
                 return material;
             }

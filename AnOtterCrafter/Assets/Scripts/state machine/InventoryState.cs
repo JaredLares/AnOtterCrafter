@@ -71,7 +71,7 @@ public class InventoryState : BaseState
             {
                 draggedSlot = hoveredSlot;
                 isDragging = true;
-                dragIcon.sprite = hoveredSlot.HoldMaterial().materialSprite;
+                dragIcon.sprite = hoveredSlot.HoldMaterial().MaterialSprite;
                 dragIcon.color = new Color(1, 1, 1, 0.5f);
                 dragIcon.enabled = true;
             }
@@ -99,7 +99,7 @@ public class InventoryState : BaseState
         // stacking same item
         if (to.HasSlot() && to.HoldMaterial() == from.HoldMaterial())
         {
-            int max = to.HoldMaterial().materialMaxAmount;
+            int max = to.HoldMaterial().MaterialMaxAmount;
             int space = max - to.MaterialAmount();
 
             if (space > 0)
