@@ -35,7 +35,7 @@ public interface Iinventory
 
 public interface IAnimal
 {
-    AnimalPreferences GetPreferences();
+    BaseAnimalPreferences GetPreferences();
 }
 
 public interface IScale

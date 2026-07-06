@@ -19,5 +19,13 @@ MonoBehaviour:
   minTradeItems: 0
   animalLikes: []
   animalDislikes: []
-  allTradePool: []
-  preferencesPool: []
+  allTradePool:
+  - {fileID: 11400000, guid: 181da595965776a448827a2c18371e0c, type: 2}
+  - {fileID: 11400000, guid: f86e723096fdd1d48b5bfc4d094ef604, type: 2}
+  - {fileID: 11400000, guid: 7a8c57373dd9fa34bb8d209b5717da78, type: 2}
+  - {fileID: 11400000, guid: 78849d0e3f8173145abed7077b42c874, type: 2}
+  - {fileID: 11400000, guid: 3e9b26c33f5a6bf49a1aae2dc81fd731, type: 2}
+  - {fileID: 11400000, guid: b7977ceb04bf9974d84d8c6744d32744, type: 2}
+  preferencesPool:
+  - {fileID: 11400000, guid: b7977ceb04bf9974d84d8c6744d32744, type: 2}
+  - {fileID: 11400000, guid: 181da595965776a448827a2c18371e0c, type: 2}

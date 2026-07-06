@@ -26,6 +26,8 @@ public class GameManager : MonoBehaviour, IGManager
     public BaseState initialState;
     public BaseState currentState;
     public Image dragIcon;
+    public bool isTrading;
+    public Biomes biome;
     
     // private
     [SerializeField] private Inventory inventory;
@@ -83,6 +85,7 @@ public class GameManager : MonoBehaviour, IGManager
 
     public void CancelTrade()
     {
+        isTrading  = false;
         
     }
 

@@ -11,6 +11,10 @@ public class MainState : BaseState
     {
         stateMachine.CloseInventory();
         dragIcon = stateMachine.dragIcon;
+        if (stateMachine.isTrading == false)
+        {
+            
+        }
     }
 
     public override void ExitState(GameManager stateMachine)
@@ -23,6 +27,11 @@ public class MainState : BaseState
         StartDrag(stateMachine);
         UpdateDragIconPosition();
         EndDrag(stateMachine);
+    }
+
+    private void StartTrade(GameManager stateMachine)
+    {
+        
     }
     
     public override void LeftMouseDown()

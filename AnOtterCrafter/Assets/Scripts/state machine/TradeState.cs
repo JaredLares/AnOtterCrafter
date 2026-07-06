@@ -10,7 +10,7 @@ public class TradeState : BaseState
 
     public override void ExitState(GameManager stateMachine)
     {
-        
+        stateMachine.CancelTrade();
     }
 
     public override void UpdateState(GameManager stateMachine)

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d9e5e45e7e230d468e55f16170b8b04, type: 3}
+  m_Name: Forest
+  m_EditorClassIdentifier: Assembly-CSharp::Biomes
+  biomeID: 1
+  biomeName: forest
+  animalProv: 25
+  mainAnimals:
+  - {fileID: 1784992344041059751, guid: 6405b36ad23e0944bbd1ec22e60ca638, type: 3}
+  - {fileID: 9071424020595305622, guid: 44468dc9afd2e224f88a859bd7eff261, type: 3}
+  allAnimals:
+  - {fileID: 7984962489263371611, guid: d7610e92fa1cb114685df5eb5bb62d1b, type: 3}
+  - {fileID: 1784992344041059751, guid: 6405b36ad23e0944bbd1ec22e60ca638, type: 3}
+  - {fileID: 9071424020595305622, guid: 44468dc9afd2e224f88a859bd7eff261, type: 3}
+  - {fileID: 3143654490982380114, guid: 4e59442f70f78024690e052d32fb0cff, type: 3}

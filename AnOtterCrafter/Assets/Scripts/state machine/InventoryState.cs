@@ -14,7 +14,6 @@ public class InventoryState : BaseState
     {
         dragIcon = stateMachine.dragIcon;
         stateMachine.OpenInventory();
-        
     }
 
     public override void ExitState(GameManager stateMachine)
