@@ -2,7 +2,7 @@ using UnityEngine;
 
 public interface IGManager
 {
-    void MaterialForID(int ID);
+    BaseMaterialSO MaterialForID(int ID);
     void SpriteForID(int ID);
 
     void ToggleTradeScreen();
@@ -15,7 +15,9 @@ public interface IGManager
 
     void SubtractMaterial(int ID, int amount);
 
-    void UpdateBiome();
+    void UpdateBiome(Biomes newBiomes);
+
+    void StartTrade();
 
 }
 

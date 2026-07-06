@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour, IGManager
     public BaseState currentState;
     public Image dragIcon;
     public bool isTrading;
+    public GameObject actualAnimal;
     public Biomes biome;
     
     // private
@@ -37,6 +38,7 @@ public class GameManager : MonoBehaviour, IGManager
     [SerializeField] private GameObject inventoryCamera;
     [SerializeField] private GameObject craftingCamera;
     [SerializeField] private GameObject globalInventory;
+    [SerializeField] private Transform SpawnPos;
     
 #endregion
 
@@ -63,10 +65,11 @@ public class GameManager : MonoBehaviour, IGManager
 
 #region InterfaceFuntions
 
-    public void MaterialForID(int ID)
+    public BaseMaterialSO MaterialForID(int ID)
     {
-        
+        return null;
     }
+
 
     public void SpriteForID(int ID)
     {
@@ -99,14 +102,22 @@ public class GameManager : MonoBehaviour, IGManager
         inventory.RemoveItem(ID, amount);
     }
 
-    public void UpdateBiome()
+    public void UpdateBiome(Biomes newBiomes)
     {
+        biome = newBiomes;
+    }
+
+    public void StartTrade()
+    {
+        actualAnimal = Instantiate(biome.GetRandomAnimal(),SpawnPos);
+        actualAnimal.GetComponent<AnimalManager>().createTrade();
 
     }
 
+
 #endregion
 
-#region Camera Controllers
+    #region Camera Controllers
 
     public void TradingScene()
     {
@@ -194,6 +205,7 @@ public class GameManager : MonoBehaviour, IGManager
         return inventory;
     }
     
+
 #endregion
 
 #region courutines

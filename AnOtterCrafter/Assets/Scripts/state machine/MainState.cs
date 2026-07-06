@@ -13,7 +13,7 @@ public class MainState : BaseState
         dragIcon = stateMachine.dragIcon;
         if (stateMachine.isTrading == false)
         {
-            
+            stateMachine.StartTrade();
         }
     }
 
