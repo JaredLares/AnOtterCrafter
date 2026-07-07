@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BaseAnimalPreferences
   animalName: Serpent
   animalID: 3
-  animalTradeProbability: 0
-  maxTradeItems: 0
-  minTradeItems: 0
+  animalTradeProbability: 25
+  maxTradeItems: 4
+  minTradeItems: 2
   animalLikes: []
   animalDislikes: []
   allTradePool:

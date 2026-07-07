@@ -67,7 +67,7 @@ public class GameManager : MonoBehaviour, IGManager
 
     public BaseMaterialSO MaterialForID(int ID)
     {
-        return null;
+        return inventory.GetMaterialForID(ID);
     }
 
 
