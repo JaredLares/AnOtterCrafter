@@ -30,7 +30,10 @@ public class GameManager : MonoBehaviour, IGManager
     public GameObject actualAnimal;
     public Biomes biome;
     
+    
     // private
+    [SerializeField] private int internalValue;
+    [SerializeField] private int animalInternalValue;
     [SerializeField] private Inventory inventory;
     [SerializeField] private UI gameUI;
     [SerializeField] private GameObject mainCamera;
@@ -61,6 +64,19 @@ public class GameManager : MonoBehaviour, IGManager
         UpdateStateMachine();
     }
     
+#endregion
+
+#region Getters and Setters
+
+    public int InternalValue
+    {
+        get { return internalValue; }
+    }
+
+    public int AnimalInternalValue
+    {
+        get { return animalInternalValue; }
+    }
 #endregion
 
 #region InterfaceFuntions

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public interface IGManager
@@ -23,6 +24,7 @@ public interface IGManager
 
 public interface Iinventory
 {
+    int GetAllMaterialsCount();
     void AddItem(int ID, int amount);
 
     void RemoveItem(int ID, int amount);
@@ -42,9 +44,9 @@ public interface IAnimal
 
 public interface IScale
 {
-    void SpawnAnimalMaterial(int ID);
+    void SpawnAnimalMaterial(Dictionary<int, int> animalTrade);
 
     void SpawnPlayerMaterial(int ID);
 
-    void DespawnAnimalMaterial(int ID);
+    void DespawnPlayerMaterial(int ID);
 }

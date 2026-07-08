@@ -5,7 +5,6 @@ using System.Collections.Generic;
 public class Inventory : MonoBehaviour , Iinventory
 {
     #region Variables
-
     // public
     public GameObject hotbarObject;
     public GameObject inventorySlotParent;
@@ -38,6 +37,11 @@ public class Inventory : MonoBehaviour , Iinventory
     #endregion
     
     #region InterfaceFuntions
+
+    public int GetAllMaterialsCount()
+    {
+        return inventorySaver.allMaterials.Count;
+    }
     public void AddItem(int ID, int amount)
     {
         int remainig = amount;
