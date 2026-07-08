@@ -88,8 +88,12 @@ public class GameManager : MonoBehaviour, IGManager
 
     public void CancelTrade()
     {
+        if (actualAnimal != null)
+        {
+            actualAnimal.GetComponent<AnimalManager>().Destroy();
+        }
+        actualAnimal = null;
         isTrading  = false;
-        
     }
 
     public void AddMaterial(int ID, int amount)

@@ -13,7 +13,7 @@ public class MainState : BaseState
         dragIcon = stateMachine.dragIcon;
         if (stateMachine.isTrading == false)
         {
-            stateMachine.StartTrade();
+            StartTrade(stateMachine);
         }
     }
 
@@ -27,11 +27,16 @@ public class MainState : BaseState
         StartDrag(stateMachine);
         UpdateDragIconPosition();
         EndDrag(stateMachine);
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            StartTrade(stateMachine);
+        }
     }
 
     private void StartTrade(GameManager stateMachine)
     {
-        
+        stateMachine.CancelTrade();
+        stateMachine.StartTrade();
     }
     
     public override void LeftMouseDown()

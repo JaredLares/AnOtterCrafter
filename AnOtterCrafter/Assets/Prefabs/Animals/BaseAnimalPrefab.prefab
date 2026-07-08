@@ -138,6 +138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AnimalManaer
   preferences: {fileID: 0}
+  tradeList: []
   animalAnim: {fileID: 0}
   speechDialgue: {fileID: 5659204961399614398}
 --- !u!1 &5659204961399614398
@@ -185,7 +186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8fbb97912f60394fb8f15eeda91087a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpeechDialogue
-  sizex: 0
+  sizex: 1.5
   maxScale: 0
   minScale: 0
   materials: []

@@ -80,7 +80,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: b117a6e3136be9a4d9b03a4be650f808, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -123,9 +123,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1127627322703936674, guid: 4d5f88c1a59b7eb468f4995cd58ddd0c, type: 3}
+      propertyPath: animalAnim
+      value: 
+      objectReference: {fileID: 5911131193981457348}
+    - target: {fileID: 1127627322703936674, guid: 4d5f88c1a59b7eb468f4995cd58ddd0c, type: 3}
       propertyPath: preferences
       value: 
       objectReference: {fileID: 11400000, guid: 454ad68efd2074246b2618060d6cda42, type: 2}
+    - target: {fileID: 1127627322703936674, guid: 4d5f88c1a59b7eb468f4995cd58ddd0c, type: 3}
+      propertyPath: speechDialogue
+      value: 
+      objectReference: {fileID: 2452363189272984652}
     - target: {fileID: 1398921641499956850, guid: 4d5f88c1a59b7eb468f4995cd58ddd0c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.43
@@ -193,5 +201,10 @@ PrefabInstance:
 --- !u!4 &2091583515618743190 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8180735527214023780, guid: 4d5f88c1a59b7eb468f4995cd58ddd0c, type: 3}
+  m_PrefabInstance: {fileID: 7818534544541620210}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2452363189272984652 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5659204961399614398, guid: 4d5f88c1a59b7eb468f4995cd58ddd0c, type: 3}
   m_PrefabInstance: {fileID: 7818534544541620210}
   m_PrefabAsset: {fileID: 0}

@@ -1,4 +1,3 @@
-using NUnit.Framework;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,7 +6,7 @@ public class AnimalManager : MonoBehaviour
     [SerializeField] private BaseAnimalPreferences preferences;
     [SerializeField] private List<BaseMaterialSO> tradeList;
     [SerializeField] private Animator animalAnim;
-    [SerializeField] private GameObject speechDialgue;
+    [SerializeField] private GameObject speechDialogue;
 
     public string AnimalName()
     {
@@ -43,25 +42,24 @@ public class AnimalManager : MonoBehaviour
         for (int i = 0; i < randomTrade; i++) 
         {
             int ID = preferences.RandomIDTrade();
+            AddToDialogue(GameManager.Instance.MaterialForID(ID));
             tradeList.Add(GameManager.Instance.MaterialForID(ID)); 
         }
-
-
         VisualizeDialogue();
     }
 
     public void VisualizeDialogue()
     {
-        speechDialgue.SetActive(true);
-        if (speechDialgue.TryGetComponent<SpeechDialogue>(out SpeechDialogue speech))
+        speechDialogue.SetActive(true);
+        if (speechDialogue.TryGetComponent<SpeechDialogue>(out SpeechDialogue speech))
         {
             speech.showMaterialsInBubble();
         }
     }
 
-    public void AddToDialgue(BaseMaterialSO material)
+    public void AddToDialogue(BaseMaterialSO material)
     {
-        if (speechDialgue.TryGetComponent<SpeechDialogue>(out SpeechDialogue speech))
+        if (speechDialogue.TryGetComponent<SpeechDialogue>(out SpeechDialogue speech))
         {
             speech.AddMaterial(material);
         }
