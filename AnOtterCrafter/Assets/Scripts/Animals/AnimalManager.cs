@@ -15,14 +15,14 @@ public class AnimalManager : MonoBehaviour,IAnimal
             return preferences.name;
         }
 
-        public BaseAnimalPreferences IAnimal.GetPreferences()
+        BaseAnimalPreferences IAnimal.GetPreferences()
         {
             return preferences;
         }
 
-        public Dictionary<int, int> IAnimal.GetTradeDictionary()
+        Dictionary<int, int> IAnimal.GetTradeDictionary()
         {
-            return AnimalTradeDictionary;
+            return animalTradeDictionary;
         }
     #endregion
 
