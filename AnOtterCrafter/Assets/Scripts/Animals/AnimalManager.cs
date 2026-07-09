@@ -1,39 +1,40 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AnimalManager : MonoBehaviour
+public class AnimalManager : MonoBehaviour,IAnimal
 {
     [SerializeField] private BaseAnimalPreferences preferences;
     [SerializeField] private List<BaseMaterialSO> tradeList;
+    private Dictionary<int, int> animalTradeDictionary;
     [SerializeField] private Animator animalAnim;
     [SerializeField] private GameObject speechDialogue;
 
-    public string AnimalName()
-    {
-        return preferences.name;
-    }
+    #region Getters And Setters
+        public string AnimalName()
+        {
+            return preferences.name;
+        }
 
-    public BaseAnimalPreferences Preferences
-    {
-        get
+        public BaseAnimalPreferences IAnimal.GetPreferences()
         {
             return preferences;
         }
-    }
 
-    public void Destroy()
-    {
-        Destroy(gameObject);
-    }
-
-    public List<BaseMaterialSO> TradeList
-    {
-        get
+        public Dictionary<int, int> IAnimal.GetTradeDictionary()
         {
-            return tradeList;
+            return AnimalTradeDictionary;
         }
-    }
+    #endregion
 
+
+    #region trade functions
+    public List<BaseMaterialSO> TradeList
+        {
+            get
+            {
+                return tradeList;
+            }
+        }
     public void createTrade()
     {
         int randomMax = preferences.MaxTradeItems;
@@ -43,11 +44,32 @@ public class AnimalManager : MonoBehaviour
         {
             int ID = preferences.RandomIDTrade();
             AddToDialogue(GameManager.Instance.MaterialForID(ID));
+            AddToTradeDictionary(ID, 1);
             tradeList.Add(GameManager.Instance.MaterialForID(ID)); 
         }
         VisualizeDialogue();
     }
 
+    public void AddToTradeDictionary(int ID, int amount)
+    {
+        if (animalTradeDictionary.ContainsKey(ID))
+        {
+            animalTradeDictionary[ID] += amount;
+        }
+        else
+        {
+            animalTradeDictionary.Add(ID, amount);
+        }
+    }
+    #endregion
+
+    public void Destroy()
+    {
+        Destroy(gameObject);
+    }
+
+    #region Dialogue Functions
+   
     public void VisualizeDialogue()
     {
         speechDialogue.SetActive(true);
@@ -65,4 +87,6 @@ public class AnimalManager : MonoBehaviour
         }
             
     }
+
+    #endregion
 }

@@ -36,7 +36,7 @@ public class Inventory : MonoBehaviour , Iinventory
 
     #endregion
     
-    #region InterfaceFuntions
+    #region InterfaceFunctions
 
     public int GetAllMaterialsCount()
     {
@@ -44,7 +44,7 @@ public class Inventory : MonoBehaviour , Iinventory
     }
     public void AddItem(int ID, int amount)
     {
-        int remainig = amount;
+        int remaining = amount;
         BaseMaterialSO tempMaterial = GetMaterialForID(ID);
         if (tempMaterial == null) return;
         foreach (var slot in allSlots)
@@ -56,10 +56,10 @@ public class Inventory : MonoBehaviour , Iinventory
                 if (currentAmount < maxStack)
                 {
                     int spaceLeft = maxStack - currentAmount;
-                    int amountToAdd = MinIntValue(spaceLeft, remainig);
+                    int amountToAdd = MinIntValue(spaceLeft, remaining);
                     slot.SetItem(tempMaterial, currentAmount + amountToAdd);
-                    remainig -= amountToAdd;
-                    if (remainig <= 0) return;
+                    remaining -= amountToAdd;
+                    if (remaining <= 0) return;
                 }
             }
         }
@@ -68,13 +68,13 @@ public class Inventory : MonoBehaviour , Iinventory
         {
             if (!slot.HasSlot())
             {
-                int amountToAdd = MinIntValue(tempMaterial.MaterialMaxAmount, remainig);
+                int amountToAdd = MinIntValue(tempMaterial.MaterialMaxAmount, remaining);
                 slot.SetItem(tempMaterial, amountToAdd);
-                remainig -= amountToAdd;
-                if(remainig <= 0) return;
+                remaining -= amountToAdd;
+                if(remaining <= 0) return;
             }
         }
-        if (remainig > 0)
+        if (remaining > 0)
         {
             Debug.Log("inventario lleno");
         }

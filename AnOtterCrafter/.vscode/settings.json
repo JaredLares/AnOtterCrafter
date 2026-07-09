@@ -67,5 +67,8 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "AnOtterCrafter.slnx"
+    "dotnet.defaultSolution": "AnOtterCrafter.slnx",
+    "cSpell.words": [
+        "hotbar"
+    ]
 }

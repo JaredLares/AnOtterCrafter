@@ -40,6 +40,8 @@ public interface Iinventory
 public interface IAnimal
 {
     BaseAnimalPreferences GetPreferences();
+    Dictionary<int, int> GetTradeDictionary();
+
 }
 
 public interface IScale
