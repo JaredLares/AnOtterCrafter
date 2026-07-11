@@ -6,6 +6,7 @@ public class TradeState : BaseState
     public override void EnterState(GameManager stateMachine)
     {
         stateMachine.OpenInventory();
+        stateMachine.ToggleTradeScreen();
     }
 
     public override void ExitState(GameManager stateMachine)

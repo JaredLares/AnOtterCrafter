@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
@@ -35,6 +36,7 @@ public class GameManager : MonoBehaviour, IGManager
     [SerializeField] private int internalValue;
     [SerializeField] private int animalInternalValue;
     [SerializeField] private Inventory inventory;
+    [SerializeField] private Scale scale;
     [SerializeField] private UI gameUI;
     [SerializeField] private GameObject mainCamera;
     [SerializeField] private GameObject tradeCamera;
@@ -97,7 +99,7 @@ public class GameManager : MonoBehaviour, IGManager
         
     }
 
-    public void Maketrade()
+    public void MakeTrade()
     {
 
     }
@@ -132,6 +134,16 @@ public class GameManager : MonoBehaviour, IGManager
         actualAnimal = Instantiate(biome.GetRandomAnimal(),SpawnPos);
         actualAnimal.GetComponent<AnimalManager>().createTrade();
 
+    }
+
+    public Dictionary<int, int> GetAnimalTradeDictionary()
+    {
+        return null;
+    }
+
+    public void ScaleTrade()
+    {
+        
     }
 
 

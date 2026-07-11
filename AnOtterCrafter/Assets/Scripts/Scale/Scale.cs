@@ -11,8 +11,8 @@ public class Scale : MonoBehaviour, IScale
 
     // private
     [SerializeField] private GameObject scaleTop,scaleLeft,scaleRight;
-    [SerializeField] private Dictionary<int, int> animaleScaleValue = new Dictionary<int, int>();
-    [SerializeField] private List<GameObject> animaleScale = new List<GameObject>();
+    [SerializeField] private Dictionary<int, int> animalScaleValue = new Dictionary<int, int>();
+    [SerializeField] private List<GameObject> animalScale = new List<GameObject>();
     [SerializeField] private List<GameObject> tradingScale = new List<GameObject>();
     [SerializeField] private GameObject materialPRefab;
     [SerializeField] private int maxRotation = 30;
@@ -23,7 +23,7 @@ public class Scale : MonoBehaviour, IScale
     #region InterfaceFunctions
     public void SpawnAnimalMaterial(Dictionary<int, int> animalTrade)
     {
-        animaleScaleValue = animalTrade;
+        animalScaleValue = animalTrade;
         StartCoroutine(SpawnTrades());
     }
 
@@ -66,8 +66,8 @@ leftSpawn.Play();
     public void resetDictionaries()
     {
         Rotate(new Vector3(0,0,0));
-        animaleScaleValue.Clear();
-        foreach (var item in animaleScale)
+        animalScaleValue.Clear();
+        foreach (var item in animalScale)
         {
             Destroy(item);
         }
@@ -75,7 +75,7 @@ leftSpawn.Play();
         {
             Destroy(item);
         }
-        animaleScale.Clear();
+        animalScale.Clear();
         tradingScale.Clear();
     }
 
@@ -115,7 +115,7 @@ leftSpawn.Play();
     {
         for(int i = 1;i<=GameManager.Instance.Inventory().GetAllMaterialsCount() ;i++)
         {
-            if(animaleScaleValue.TryGetValue(i, out int amount))
+            if(animalScaleValue.TryGetValue(i, out int amount))
             {
                 RotateScale(GameManager.Instance.InternalValue, GameManager.Instance.AnimalInternalValue);
                 for (int j = 0; j < amount; j++)
@@ -127,7 +127,7 @@ leftSpawn.Play();
                     temp.GetComponent<SpriteRenderer>().sortingOrder = 4;
                     temp.AddComponent<PolygonCollider2D>();
                     yield return new WaitForSeconds(0.25f);
-                    animaleScale.Add(temp);
+                    animalScale.Add(temp);
                 }
             }
         }

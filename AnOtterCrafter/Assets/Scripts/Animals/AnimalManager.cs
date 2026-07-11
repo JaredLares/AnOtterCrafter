@@ -5,7 +5,7 @@ public class AnimalManager : MonoBehaviour,IAnimal
 {
     [SerializeField] private BaseAnimalPreferences preferences;
     [SerializeField] private List<BaseMaterialSO> tradeList;
-    private Dictionary<int, int> animalTradeDictionary;
+    private Dictionary<int, int> animalTradeDictionary = new Dictionary<int, int>();
     [SerializeField] private Animator animalAnim;
     [SerializeField] private GameObject speechDialogue;
 
@@ -52,7 +52,8 @@ public class AnimalManager : MonoBehaviour,IAnimal
 
     public void AddToTradeDictionary(int ID, int amount)
     {
-        if (animalTradeDictionary.ContainsKey(ID))
+ 
+        if (animalTradeDictionary.ContainsKey(ID) && animalTradeDictionary.Count != 0)
         {
             animalTradeDictionary[ID] += amount;
         }

@@ -8,7 +8,7 @@ public interface IGManager
 
     void ToggleTradeScreen();
 
-    void Maketrade();
+    void MakeTrade();
 
     void CancelTrade();
 
@@ -19,6 +19,10 @@ public interface IGManager
     void UpdateBiome(Biomes newBiomes);
 
     void StartTrade();
+
+    Dictionary<int, int> GetAnimalTradeDictionary();
+
+    void ScaleTrade();
 
 }
 
