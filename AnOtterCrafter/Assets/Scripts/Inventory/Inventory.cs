@@ -93,6 +93,13 @@ public class Inventory : MonoBehaviour , Iinventory
 
     public Sprite GetItemSprite(int ID)
     {
+        foreach (var material in inventorySaver.allMaterials )
+        {
+            if (material.ID == ID)
+            {
+                return material.MaterialSprite;
+            }
+        }
         return null;
     }
 

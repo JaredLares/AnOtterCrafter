@@ -25,6 +25,7 @@ public class Scale : MonoBehaviour, IScale
     {
         animalScaleValue = animalTrade;
         StartCoroutine(SpawnTrades());
+        RotateScale(GameManager.Instance.InternalValue, GameManager.Instance.AnimalInternalValue);
     }
 
     public void SpawnPlayerMaterial(int ID)
@@ -65,7 +66,7 @@ leftSpawn.Play();
     #region ScriptFunctions
     public void resetDictionaries()
     {
-        Rotate(new Vector3(0,0,0));
+        StartCoroutine(Rotate(Vector3.zero));
         animalScaleValue.Clear();
         foreach (var item in animalScale)
         {
@@ -111,7 +112,7 @@ leftSpawn.Play();
             yield return null;
         }
     }
-        IEnumerator SpawnTrades()
+    IEnumerator SpawnTrades()
     {
         for(int i = 1;i<=GameManager.Instance.Inventory().GetAllMaterialsCount() ;i++)
         {
@@ -123,7 +124,7 @@ leftSpawn.Play();
                     rightSpawn.Play();
                     GameObject temp = Instantiate(materialPRefab, scaleRight.transform.position,new Quaternion(0,0,0,0));
                     temp.GetComponent<SpriteRenderer>().sprite =
-                        GameManager.Instance.Inventory().GetItemSprite(i);
+                        GameManager.Instance.SpriteForID(i);
                     temp.GetComponent<SpriteRenderer>().sortingOrder = 4;
                     temp.AddComponent<PolygonCollider2D>();
                     yield return new WaitForSeconds(0.25f);

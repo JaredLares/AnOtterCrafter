@@ -39,22 +39,22 @@ public class MainState : BaseState
         stateMachine.StartTrade();
     }
     
-    public override void LeftMouseDown()
-    {
-
-    }
-
-    public override void LeftMouseUp()
+    public override void LeftMouseDown(GameManager stateMachine)
     {
         
     }
 
-    public override void RightMouseDown()
+    public override void LeftMouseUp(GameManager stateMachine)
     {
         
     }
 
-    public override void RightMouseUp()
+    public override void RightMouseDown(GameManager stateMachine)
+    {
+        
+    }
+
+    public override void RightMouseUp(GameManager stateMachine)
     {
         
     }

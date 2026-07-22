@@ -4,7 +4,7 @@ using UnityEngine;
 public interface IGManager
 {
     BaseMaterialSO MaterialForID(int ID);
-    void SpriteForID(int ID);
+    Sprite SpriteForID(int ID);
 
     void ToggleTradeScreen();
 
@@ -22,7 +22,7 @@ public interface IGManager
 
     Dictionary<int, int> GetAnimalTradeDictionary();
 
-    void ScaleTrade();
+    void GetAnimalInternalValue(int internalValue);
 
 }
 

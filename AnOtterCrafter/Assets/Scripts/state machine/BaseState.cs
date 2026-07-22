@@ -19,21 +19,21 @@ public class BaseState : ScriptableObject
         
     }
     
-    public virtual void LeftMouseDown()
+    public virtual void LeftMouseDown(GameManager stateMachine)
     {
         
     }
-    public virtual void RightMouseDown()
-    {
-        
-    }
-
-    public virtual void LeftMouseUp()
+    public virtual void RightMouseDown(GameManager stateMachine)
     {
         
     }
 
-    public virtual void RightMouseUp()
+    public virtual void LeftMouseUp(GameManager stateMachine)
+    {
+        
+    }
+
+    public virtual void RightMouseUp(GameManager stateMachine)
     {
         
     }

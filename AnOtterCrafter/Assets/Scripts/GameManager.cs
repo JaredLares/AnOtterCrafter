@@ -31,9 +31,9 @@ public class GameManager : MonoBehaviour, IGManager
     public GameObject actualAnimal;
     public Biomes biome;
     
-    
     // private
     [SerializeField] private int internalValue;
+    [SerializeField] private List<BaseMaterialSO> playerTradeMaterials;
     [SerializeField] private int animalInternalValue;
     [SerializeField] private Inventory inventory;
     [SerializeField] private Scale scale;
@@ -43,6 +43,9 @@ public class GameManager : MonoBehaviour, IGManager
     [SerializeField] private GameObject inventoryCamera;
     [SerializeField] private GameObject craftingCamera;
     [SerializeField] private GameObject globalInventory;
+    [SerializeField] private GameObject tradingButton;
+    [SerializeField] private GameObject tradingOptions;
+
     [SerializeField] private Transform SpawnPos;
     
 #endregion
@@ -89,29 +92,53 @@ public class GameManager : MonoBehaviour, IGManager
     }
 
 
-    public void SpriteForID(int ID)
+    public Sprite SpriteForID(int ID)
     {
-
+        return inventory.GetItemSprite(ID);
     }
 
     public void ToggleTradeScreen()
     {
-        
+        TradingScene();
+        tradingButton.SetActive(false);
+        StartCoroutine(TradeCouroutine());
+        scale.SpawnAnimalMaterial(actualAnimal.GetComponent<AnimalManager>().GetTradeDictionary());
     }
 
     public void MakeTrade()
     {
+        if(tradingOptions.activeInHierarchy)
+        {
+            tradingOptions.SetActive(false);
+        }
+        scale.resetDictionaries();
+        MainScene();
 
+    }
+
+    public void CancelTradeScene()
+    {
+        if(tradingOptions.activeInHierarchy)
+        {
+            tradingOptions.SetActive(false);
+        }
+        scale.resetDictionaries();
+        MainScene();
     }
 
     public void CancelTrade()
     {
+        if(tradingOptions.activeInHierarchy)
+        {
+            tradingOptions.SetActive(false);
+        }
+        scale.resetDictionaries();
         if (actualAnimal != null)
         {
             actualAnimal.GetComponent<AnimalManager>().Destroy();
         }
         actualAnimal = null;
-        isTrading  = false;
+        isTrading = false;
     }
 
     public void AddMaterial(int ID, int amount)
@@ -133,7 +160,7 @@ public class GameManager : MonoBehaviour, IGManager
     {
         actualAnimal = Instantiate(biome.GetRandomAnimal(),SpawnPos);
         actualAnimal.GetComponent<AnimalManager>().createTrade();
-
+        tradeButtonCouroutine();
     }
 
     public Dictionary<int, int> GetAnimalTradeDictionary()
@@ -141,11 +168,15 @@ public class GameManager : MonoBehaviour, IGManager
         return null;
     }
 
-    public void ScaleTrade()
+    public void GetAnimalInternalValue(int internalValue)
     {
-        
+        animalInternalValue = internalValue;
     }
 
+    public void addPlayerTrade(BaseMaterialSO material)
+    {
+        playerTradeMaterials.Add(material);
+    }
 
 #endregion
 
@@ -153,12 +184,14 @@ public class GameManager : MonoBehaviour, IGManager
 
     public void TradingScene()
     {
+        scale.resetDictionaries();
         ChangeState(inventory.tradeState);
         globalInventory.SetActive(false);
         mainCamera.SetActive(false);
         tradeCamera.SetActive(true);
         inventoryCamera.SetActive(false);
         craftingCamera.SetActive(false);
+        OpenInventory();
     }
     
     public void MainScene()
@@ -169,6 +202,9 @@ public class GameManager : MonoBehaviour, IGManager
         craftingCamera.SetActive(false);
         mainCamera.SetActive(true);
         tradeCamera.SetActive(false);
+        StartCoroutine(tradeButtonCouroutine());
+        scale.resetDictionaries();
+
     }
     
     public void InventoryScene()
@@ -179,6 +215,9 @@ public class GameManager : MonoBehaviour, IGManager
         mainCamera.SetActive(false);
         tradeCamera.SetActive(false);
         StartCoroutine(InventoryCouroutine());
+        tradingButton.SetActive(false);
+        scale.resetDictionaries();
+
     }
     
     public void CraftingScene()
@@ -189,6 +228,10 @@ public class GameManager : MonoBehaviour, IGManager
         craftingCamera.SetActive(true);
         mainCamera.SetActive(false);
         tradeCamera.SetActive(false);
+        tradingButton.SetActive(false);
+        tradingOptions.SetActive(false);
+        scale.resetDictionaries();
+
     }
 
     public bool MainCameraActive()
@@ -248,6 +291,24 @@ public class GameManager : MonoBehaviour, IGManager
         if (!mainCamera.activeInHierarchy && !craftingCamera.activeInHierarchy)
         {
             globalInventory.SetActive(true);
+        }
+        yield return null;
+    }
+    IEnumerator TradeCouroutine()
+    {
+        yield return new WaitForSeconds(.9f);
+        if (!mainCamera.activeInHierarchy && !craftingCamera.activeInHierarchy && !inventoryCamera.activeInHierarchy)
+        {
+            tradingOptions.SetActive(true);
+        }
+        yield return null;
+    }
+    IEnumerator tradeButtonCouroutine()
+    {
+        yield return new WaitForSeconds(.9f);
+        if (!tradeCamera.activeInHierarchy && !craftingCamera.activeInHierarchy && !inventoryCamera.activeInHierarchy)
+        {
+            tradingButton.SetActive(true);
         }
         yield return null;
     }

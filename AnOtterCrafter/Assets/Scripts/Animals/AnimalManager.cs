@@ -5,6 +5,7 @@ public class AnimalManager : MonoBehaviour,IAnimal
 {
     [SerializeField] private BaseAnimalPreferences preferences;
     [SerializeField] private List<BaseMaterialSO> tradeList;
+    [SerializeField] private int animalInternalValue;
     private Dictionary<int, int> animalTradeDictionary = new Dictionary<int, int>();
     [SerializeField] private Animator animalAnim;
     [SerializeField] private GameObject speechDialogue;
@@ -20,10 +21,11 @@ public class AnimalManager : MonoBehaviour,IAnimal
             return preferences;
         }
 
-        Dictionary<int, int> IAnimal.GetTradeDictionary()
+        public Dictionary<int, int> GetTradeDictionary()
         {
             return animalTradeDictionary;
         }
+
     #endregion
 
 
@@ -47,7 +49,18 @@ public class AnimalManager : MonoBehaviour,IAnimal
             AddToTradeDictionary(ID, 1);
             tradeList.Add(GameManager.Instance.MaterialForID(ID)); 
         }
+        InternalValue();
         VisualizeDialogue();
+    }
+
+    public void InternalValue()
+    {
+        animalInternalValue = 0;
+        foreach (var item in tradeList)
+        {
+            animalInternalValue += item.MaterialValue;
+        }
+        GameManager.Instance.GetAnimalInternalValue(animalInternalValue);
     }
 
     public void AddToTradeDictionary(int ID, int amount)
